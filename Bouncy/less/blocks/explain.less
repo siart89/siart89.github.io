@@ -1,0 +1,53 @@
+.explain-bouncy{
+    max-width: 845px;
+    width: 100%;
+    margin: 90px auto 70px;
+    display: flex;
+    justify-content: space-between;
+    
+    &-text{
+        max-width: 470px;
+        margin-top: 25px;
+        
+        h2{
+            color:@title-color;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 2px;
+            word-spacing: 2px;
+        }
+        p{
+            color:@main-text;
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+            padding: 35px 0 25px;
+        }
+        a{
+            text-decoration: none;
+        }
+        &-btn{
+            color:#000;
+            transition: 0.4s ease-in-out;
+            
+        }
+        &-btn:hover{
+            box-shadow: 1px 1px 8px @main-text, -1px 1px 8px @main-text, 1px -1px 8px @main-text;
+            font-size: 16px;
+            color:@main-text;
+            font-weight: bold;
+            }
+        
+       
+    }
+    &-ipad{
+        max-width: 210px;
+        min-height: 350px;
+        height: 1px;
+        
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+    }
+}

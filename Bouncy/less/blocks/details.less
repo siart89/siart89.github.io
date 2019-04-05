@@ -1,0 +1,93 @@
+
+.details-bouncy-main{
+    background: #f3f3f3;
+    box-shadow: 3px 3px 3px #c8c7c7, -3px 3px 3px #c8c7c7;
+    a{
+        text-decoration: none;
+    }
+}
+.details-bouncy{
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    &-title{
+        max-width: 470px;
+        text-align: center;
+        padding-top: 75px;
+        
+        h2{
+            text-transform: uppercase;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            color:@title-color;
+            letter-spacing: 3px;
+            word-spacing: 5px;
+        }
+        p{
+            color:@main-text;
+            padding: 25px 0 45px;
+        }
+    
+        .title-icons{
+            display: flex;
+            justify-content: center;
+            a{
+                display: flex;
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                background: #81868e;
+                align-items: center;
+                justify-content: center;
+                margin-right: 27px;
+                
+                }
+            a:last-child{
+                margin-right:0;
+            }
+            a:hover{
+                background: @base-green;
+            }
+        }
+    
+    }
+    .ideas-text-title{
+        margin-top: 55px;
+        margin-bottom: 100px;
+        width: 100%;
+        
+        h3{
+            font-size: 20px;
+            color:#464646;
+            font-weight: 300;
+        }
+    }
+    .ideas-text{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+        color:@main-text;
+        
+        &-block-left{
+            max-width: 335px;
+           resize: 16px;
+        }
+        &-block-right{
+            max-width: 520px;
+            font-size: 14px;
+            letter-spacing: 0.7px;
+        }
+        a{
+            color:@base-green;
+            font-weight: 600;
+        }
+        a:hover{
+            text-decoration: underline;
+            
+        }
+    }
+}
