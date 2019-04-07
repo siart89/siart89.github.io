@@ -1,0 +1,97 @@
+.team-wraper{
+    max-width: 990px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    
+        .team-slider{
+            overflow-x: hidden;
+            display: flex;
+            flex-wrap: nowrap;
+            
+        
+            .hidden-input{
+            display: none;
+            }
+            .main-slider-wraper{
+                display: inline-block;
+                min-width: 100%;
+                position: relative;
+                transition: .9s ease-in;
+                
+                .slider-box{
+                    display: flex;
+                    width: 99%;
+            
+            
+                    .team-person-photo{
+                
+                        img{
+                            max-width: 100%;
+                        }
+                    }
+                    .team-person-description{
+                        max-width: 38%;
+                        margin-left: auto;
+                        text-align: right;
+                    }
+                  }
+                .team-slider-1{
+                    
+                }
+                .team-slider-2{
+                    
+                }
+                .team-slider-3{
+                    
+                }
+            }
+        }
+    
+    .slider-point{
+        
+        
+            label{
+                display:inline-block;
+                width: 9px;
+                height: 9px;
+                border:1px solid @base-green;
+                border-radius: 50%;
+                position: absolute;
+                bottom: -70px;
+            }
+            
+        }
+        #slider__point__1{
+            left:48%;
+           
+        }
+        #slider__point__2{
+            left:50%;
+        }
+        #slider__point__3{
+            left:52%;
+        }
+    
+    
+    #person_1:checked ~ .main-slider-wraper{
+        right:0;
+    }
+   #person_1:checked ~ .slider-point #slider__point__1{
+        background: @base-green;
+    }
+    #person_2:checked ~ .main-slider-wraper{
+        right:100%;
+    }
+    #person_2:checked ~ .slider-point #slider__point__2{
+        background: @base-green;
+    }
+    #person_3:checked ~ .main-slider-wraper{
+        right:200%;
+    }
+    #person_3:checked ~ .slider-point #slider__point__3{
+        background: @base-green;
+    }
+    
+    
+}
