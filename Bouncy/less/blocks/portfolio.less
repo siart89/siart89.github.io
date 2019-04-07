@@ -1,0 +1,103 @@
+.portfolio-wraper{
+    background: #f3f3f3;
+    box-shadow: 3px 3px 3px #c8c7c7, -3px 3px 3px #c8c7c7;
+    a{
+        text-decoration: none;
+        color:#464646;
+    }
+    
+    .portfolio{
+        max-width: 1110px;
+        width: 100%;
+        margin: 0 auto;
+        &-nav{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            margin-bottom: 75px;
+            
+            a{
+                font-size: 16px;
+                font-weight: 400;
+                padding-right: 30px;
+                display: block;
+                position: relative;
+                
+            }
+            
+            a:last-child{
+                padding-right: 0;
+            }
+            a:hover:after{
+                content: '';
+                display: block;
+                width: 40px;
+                height: 2px;
+                background: @base-green;
+                position: absolute;
+                bottom: -12px;
+                                          
+            }
+            #nav-works::after{
+                left:14%;
+            }
+            #nav-print::after{
+                width: 30px;
+                left: 4%;
+            }
+            #nav-identity::after{
+                left: 8%;                    
+            }
+            #nav-branding::after{
+                left: 12%;                    
+            }
+            #nav-web::after{
+                width: 25px;
+                left: 7%;
+            }
+            #nav-html::after{
+                width: 30px;
+                left:7%;
+                    
+            }
+            #nav-wordpress::after{
+                left: 25%;                    
+            }
+           
+        }
+        
+        &-pic{
+            column-count: 4;
+            column-gap: 10px;
+            text-align: center;
+            
+           
+            
+            img{
+                display: inline-block;
+                max-width: 100%;
+                padding-bottom: 10px;
+            }
+        }
+        &-text-btn{
+            padding-top: 30px;
+           text-align: center;
+            background: url(../img/portfolio/portfolio_bg.png) no-repeat center top;
+            padding-bottom: 50px;
+            padding-top: 50px;
+            
+            span{
+                font-size: 20px;
+                color:#fff;
+                font-weight: 400;
+            }
+            a{
+                margin: 30px auto 0px;
+                font-size: 16px;
+                color:#fff;
+                border-color: #fff;
+            }
+        }
+        
+    }
+}
