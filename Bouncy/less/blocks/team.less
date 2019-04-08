@@ -29,27 +29,103 @@
             
             
                     .team-person-photo{
-                
+   // -----------Фотография персонажа             
                         img{
                             max-width: 100%;
                         }
                     }
+    //--------Описание персонажа, должность, навыки                
                     .team-person-description{
                         max-width: 38%;
                         margin-left: auto;
                         text-align: right;
+                        color:@main-text;
+                        
+                        
+                        h3{
+                            font-size: 20px;
+                            color:#464646;
+                            font-weight: 300;
+                            
+                        }
+                        em{
+                            
+                           
+                        }
+                        p{
+                            margin: 25px auto 40px;
+                            
+                        }
+   //-----------Контейнер для отображения навыков в процентах                     
+                        .person__skill{
+                            text-align: left;
+                            max-width: 80%;
+                            margin-left: auto;
+                            text-transform: uppercase;
+                            margin-bottom: 30px;
+                            font-size: 16px;
+                            font-family: 'Source Sans Pro', sans-serif;
+                            font-weight: 300;
+                            
+                            &__percent{
+                                float: right;
+                            }
+    // -----------Линия заполнения для процентного соотношения                         
+                            &__line{
+                                width: 100%;
+                                height: 4px;
+                                background: #e1e4e9; 
+    // ---------процентная заполненость                             
+                                span{
+                                    display: block;
+                                    height: 4px;
+                                    background: @base-green; 
+                                }
+                                
+                                 // ---------процентная заполненость персонаж №1
+                                #percent__line__branding__person1{
+                                    width:80%;
+                                }
+                                #percent__line__design__person1{
+                                    width:65%;
+                                }
+                                #percent__line__interface__person1{
+                                    width:75%;
+                                }
+                                
+                                 // ---------процентная заполненость персонаж №2
+                                #percent__line__branding__person2{
+                                    width:95%;
+                                }
+                                #percent__line__design__person2{
+                                    width:75%;
+                                }
+                                #percent__line__interface__person2{
+                                    width:65%;
+                                }
+                                
+                                 // ---------процентная заполненость персонаж №3
+                                #percent__line__branding__person3{
+                                    width:75%;
+                                }
+                                #percent__line__design__person3{
+                                    width:80%;
+                                }
+                                #percent__line__interface__person3{
+                                    width:70%;
+                                }
+                                
+                                
+                                
+                                
+                            }
+                        }
+                        .person-skill-interface{
+                            margin-bottom: 0;
+                        }
                     }
                   }
-                .team-slider-1{
-                    
                 }
-                .team-slider-2{
-                    
-                }
-                .team-slider-3{
-                    
-                }
-            }
         }
     //---------------Точки выбора слайда 
     .slider-point{
