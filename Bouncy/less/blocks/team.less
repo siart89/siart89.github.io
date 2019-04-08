@@ -3,6 +3,7 @@
     width: 100%;
     margin: 0 auto;
     position: relative;
+    padding-bottom: 160px;
 //---------------------- основной контейнер для всей конструкции слайдов    
         .team-slider{
             overflow-x: hidden;
@@ -40,12 +41,26 @@
                         margin-left: auto;
                         text-align: right;
                         color:@main-text;
+                        position: relative;
+                        padding-right: 40px;
                         
                         
                         h3{
                             font-size: 20px;
                             color:#464646;
                             font-weight: 300;
+                            line-height: 1;
+                            
+                        }
+                        h3::after{
+                            content: '';
+                            display: block;
+                            width: 4px;
+                            height: 40px;
+                            position: absolute;
+                            background: @base-green;
+                            right: 0;
+                            top: 5px;
                             
                         }
                         em{
@@ -138,7 +153,7 @@
                 border:1px solid @base-green;
                 border-radius: 50%;
                 position: absolute;
-                bottom: -70px;
+                bottom: 100px;
             }
             
         }
