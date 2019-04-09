@@ -1,0 +1,85 @@
+.testimonials{
+    background: #f3f3f3;
+    padding-bottom: 100px;
+    
+    &-slider{
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+        background: #fff;
+        box-shadow: 2px 2px 2px #e7e7e7, -2px 2px 2px #e7e7e7;
+        
+        
+        #comment_1:checked ~ &-wraper{
+            right: 0; 
+        }
+        #comment_1:checked ~ .slider-point #slider__point__comment_1{
+            background: @base-green;
+        }
+        #comment_2:checked ~ &-wraper{
+            right: 100%; 
+        }
+        #comment_2:checked ~ .slider-point #slider__point__comment_2{
+            background: @base-green;
+        }
+        #comment_3:checked ~ &-wraper{
+            right: 200%; 
+        }
+        #comment_3:checked ~ .slider-point #slider__point__comment_3{
+            background: @base-green;
+        }
+        
+        // ------------ Позиционирование точек выбора слайда
+        label{
+            bottom: 50px;
+            z-index: 99;
+        }
+        
+        #slider__point__comment_1{
+            left:48%;
+        }
+        #slider__point__comment_2{
+            left:50%;
+        }
+        #slider__point__comment_3{
+            left:52%;
+        }
+        
+        //--------------Внутренний контейнер сладера с коментарием 
+        &-wraper{
+            min-width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 60px;
+            padding-bottom: 110px;
+            position: relative;
+            transition: 0.5s ease-in-out;
+
+            // -------------------фото пользователя
+            img{
+                max-width: 100%;
+            }
+            
+            //------------- Блок с комментариями
+            .comment-wraper{
+                max-width: 65%;
+                color:@main-text;
+                font-size: 16px;
+                line-height: 1.5;
+                
+                .founder__name{
+                    text-transform: uppercase;
+                    color:@base-green;
+                    font-weight: 700;
+                }
+                .founder_specification{
+                    text-transform: uppercase;
+                    color:#464646;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
