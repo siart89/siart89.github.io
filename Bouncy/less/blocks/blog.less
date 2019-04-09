@@ -2,7 +2,66 @@
     background: url(../img/blog/blog_bg.png) no-repeat center top;
     color:@main-text;
     position: relative;
+    // -------------Скрытый контейнер для выыода текста Read more
+    .read-more-wraper{
+        position: absolute;
+        max-width: 100%;
+        height: 100%;
+        background: url(../img/blog/blog_bg.png) no-repeat center top;
+        z-index: -1;
+       //-----возврат при нажатии на задний фон 
+        #read-less-bg{
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            
+        }
+        &-content{
+            max-width: 80%;
+            margin: 25px auto 0;
+            position: relative;
+            background: #f3f3f3;
+            padding: 25px;
+            column-count: 2;
+            h3{
+                column-span: all;
+                text-transform: uppercase;
+            }
+            #read-less-btn{
+                display: block;
+                position: absolute;
+                width: 50px;
+                right: 15px;
+                top: 10px;
+                cursor: pointer;
+                text-decoration: underline;
+                color:#ff8686;
+                text-align: right;
+                
+            }
+            #read-less-btn:hover::before{
+                content: '\2190';
+                color:#ff8686;
+                
+            }
+            #read-less-btn:hover{
+                text-decoration:none;
+                padding-left: 5px;
+            }
+        }
+        
+    }
+    //------Показать скрытый текст 
+    #read-more:checked ~ .read-more-wraper{
+        z-index: 99;
+    }
+    //------Скрыть текст 
+    #read-less:checked ~ .read-more-wraper{
+        z-index: -1;
+    }
     
+    //-------------------Контейнер для слайдеров
     &-slider{
         padding-left: 95px;
         overflow-y: hidden;
@@ -96,11 +155,18 @@
                     font-weight: 400;
                     
                 }
-                a{
+                /*a{
                     text-decoration: none;
                     color:#b2b3b3;
                 }
                 a:hover{
+                    color:@base-green;
+                }*/
+                #read-more-btn{
+                    color:#b2b3b3;
+                    cursor: pointer;
+                }
+                #read-more-btn:hover{
                     color:@base-green;
                 }
             }
