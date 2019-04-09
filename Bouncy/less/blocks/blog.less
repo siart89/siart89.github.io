@@ -1,0 +1,110 @@
+.blog{
+    background: url(../img/blog/blog_bg.png) no-repeat center top;
+    color:@main-text;
+    position: relative;
+    
+    &-slider{
+        padding-left: 95px;
+        overflow-y: hidden;
+        height: 680px;
+        
+        label{
+            right: 90px;
+            border-color: #b2b3b3;
+        }
+        #slider__point__blog_1{
+            top:48%;
+        }
+        #slider__point__blog_2{
+            top:50%;
+        }
+        #slider__point__blog_3{
+            top:52%;
+        }
+        
+        
+        #blog_1:checked ~ &-wraper{
+            bottom:0;
+        }
+        #blog_1:checked ~ .blog-slider-point #slider__point__blog_1{
+            background:#b2b3b3;
+        }
+        #blog_2:checked ~ &-wraper{
+            bottom:100%;
+        }
+        #blog_2:checked ~ .blog-slider-point #slider__point__blog_2{
+            background:#b2b3b3;
+        }
+        #blog_3:checked ~ &-wraper{
+            bottom:200%;
+        }
+        #blog_3:checked ~ .blog-slider-point #slider__point__blog_3{
+            background:#b2b3b3;
+        }
+        &-wraper{
+            max-width: 670px;
+            width: 100%;
+            height: 100%;
+            //height: 1px;
+            position: relative;
+            transition: 0.5s ease-in-out;
+            
+            h2{
+                padding-top: 70px;
+                text-transform: uppercase;
+                font-size: 20px;
+                color:#fff;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 300;
+                letter-spacing: 3px;
+                
+            }
+            #blog_title{
+                display: block;
+                max-width: 65%;
+                color:#b2b3b3;
+            }
+            
+            &-content{
+                width: 80%;
+                margin-left: 75px;
+                margin-top:100px;
+                
+                h3{
+                    margin: 0;
+                    color:#b2b3b3;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+                em{
+                    line-height: 2;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    
+                    span{
+                        color:@base-green;
+                    }
+                }
+                #blog_counter{
+                    color:#464646;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    font-weight: 300;
+                }
+                p{
+                    padding-top: 55px;
+                    padding-bottom: 45px;
+                    font-weight: 400;
+                    
+                }
+                a{
+                    text-decoration: none;
+                    color:#b2b3b3;
+                }
+                a:hover{
+                    color:@base-green;
+                }
+            }
+        }
+    }
+    
+}
