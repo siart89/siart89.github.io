@@ -2,21 +2,28 @@
     background: url(../img/blog/blog_bg.png) no-repeat center top;
     color:@main-text;
     position: relative;
+    
     // -------------Скрытый контейнер для выыода текста Read more
-    .read-more-wraper{
+    .read-more-wraper, .read-more-wraper_2 {
         position: absolute;
         max-width: 100%;
-        height: 100%;
+        height: 680px;
         background: url(../img/blog/blog_bg.png) no-repeat center top;
         z-index: -1;
+        overflow-y: scroll;
+        //--------Фон для 2 блока с выплывающим текстом
+        #more_2{
+            background: #ffdfdf;
+        }
        //-----возврат при нажатии на задний фон 
-        #read-less-bg{
+        #read-less-bg, #read-less-bg_2{
             display: block;
             position: absolute;
             width: 100%;
             height: 100%;
             
         }
+        //------------Блок контента с всплывающим текстом
         &-content{
             max-width: 80%;
             margin: 25px auto 0;
@@ -28,7 +35,8 @@
                 column-span: all;
                 text-transform: uppercase;
             }
-            #read-less-btn{
+            //---------кнопка скрытия текста 
+            #read-less-btn, #read-less-btn_2{
                 display: block;
                 position: absolute;
                 width: 50px;
@@ -40,12 +48,12 @@
                 text-align: right;
                 
             }
-            #read-less-btn:hover::before{
+            #read-less-btn:hover::before, #read-less-btn_2:hover::before{
                 content: '\2190';
                 color:#ff8686;
                 
             }
-            #read-less-btn:hover{
+            #read-less-btn:hover, #read-less-btn_2:hover{
                 text-decoration:none;
                 padding-left: 5px;
             }
@@ -56,10 +64,33 @@
     #read-more:checked ~ .read-more-wraper{
         z-index: 99;
     }
+    #read-more_2:checked ~ .read-more-wraper_2{
+        z-index: 99;
+    }
+    
     //------Скрыть текст 
     #read-less:checked ~ .read-more-wraper{
         z-index: -1;
     }
+    //---после ззакрытия текста остаеться на том же слайде
+     #read-less:checked ~ .blog-slider .blog-slider-wraper{
+        bottom:0;
+    }
+    #read-less:checked ~ .blog-slider .blog-slider-point #slider__point__blog_1{
+        background:#b2b3b3;
+    }
+    #read-less_2:checked ~ .read-more-wraper_2{
+        z-index: -1;
+    }
+    //---после ззакрытия текста остаеться на том же слайде
+    #read-less_2:checked ~ .blog-slider .blog-slider-wraper{
+        bottom:200%;
+    }
+    #read-less_2:checked ~ .blog-slider .blog-slider-point #slider__point__blog_3{
+        background:#b2b3b3;
+    }
+   
+    
     
     //-------------------Контейнер для слайдеров
     &-slider{
@@ -70,6 +101,7 @@
         label{
             right: 90px;
             border-color: #b2b3b3;
+            z-index: 90;
         }
         #slider__point__blog_1{
             top:48%;
@@ -81,7 +113,7 @@
             top:52%;
         }
         
-        
+        //-----------Правила перемещения слайдов
         #blog_1:checked ~ &-wraper{
             bottom:0;
         }
@@ -100,6 +132,7 @@
         #blog_3:checked ~ .blog-slider-point #slider__point__blog_3{
             background:#b2b3b3;
         }
+        //-------------Основной контейнер слайдера
         &-wraper{
             max-width: 670px;
             width: 100%;
@@ -118,14 +151,18 @@
                 letter-spacing: 3px;
                 
             }
-            #blog_title{
+            .blog_title{
                 display: block;
                 max-width: 65%;
                 color:#b2b3b3;
             }
-            
-            &-content{
+            .text-content{
                 width: 80%;
+            }
+            
+            //----------Блок с текстовым контентом сладера
+            &-content{
+                
                 margin-left: 75px;
                 margin-top:100px;
                 
@@ -162,14 +199,33 @@
                 a:hover{
                     color:@base-green;
                 }*/
-                #read-more-btn{
+                #read-more-btn, #read-more-btn_2{
                     color:#b2b3b3;
                     cursor: pointer;
                 }
-                #read-more-btn:hover{
+                #read-more-btn:hover, #read-more-btn_2:hover{
                     color:@base-green;
                 }
+                
             }
+            
+            //------------блок с видео контентом
+            .videos{
+                width: 800px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+        
+                
+                .video-content{
+                    max-width: 45%;
+                    height: 180px;
+                    padding-bottom: 20px;
+                }
+                
+                
+            }
+            
         }
     }
     
