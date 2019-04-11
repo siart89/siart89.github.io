@@ -1,0 +1,158 @@
+.price{
+    background: #f3f3f3;
+    position: relative;
+    padding-bottom: 100px;
+    
+    #off-btn-bg{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: none;
+        cursor: auto;
+}
+// --------------Оновной контейнер для карточек
+.main-price{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    
+    
+    
+    }
+    label{
+        display: block;
+        text-align: center;
+        background: @base-green;
+        cursor: pointer;
+        color:#fff;
+        transition: .1s ease-in;
+    }
+    label:hover{
+        color:darken(#fff, 50%);
+    }
+    //-----------Контейнер Карточка 
+    .price-cards{
+        width: 235px;
+        height: 300px;
+        text-align: center;
+        position: relative;
+        
+        
+        
+        //------------Лицевая карточка
+        &-main{
+            min-height: 100%;
+            width: 100%;
+            background: #fff;
+            box-shadow: 2px 2px 2px @main-text;
+            transform-origin: center;
+            transform: rotateY(0);
+            transition:  .9s ease-in-out;
+            backface-visibility: hidden;
+            //transition-property: transform, width, z-index, box-shadow;
+            
+            //display: none;
+            // Заголовок кнопка , название тарифа 
+            .price-cards-title{
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 20px;
+                padding: 25px 0;
+                margin-bottom: 70px;
+            }
+            strong{
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 700;
+                color:@base-green;
+                font-size: 42px;
+                line-height: 1;
+                
+            }
+            span{
+                color:@main-text;
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+        //------------Выплывающая карточка
+        &-off{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top:0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 2px 2px 2px @main-text;
+            transform-origin: center;
+            transform: rotateY(180deg);
+            transition: .9s ease-in-out;
+             backface-visibility: hidden;
+            //transition-property: transform, z-index, width, box-shadow;
+          
+            //-------------Приемущества тарифа
+            .price-cards-off-titles{
+                color:@main-text;
+                font-weight: 400;
+                max-width: 60%;
+                margin: 31px auto;
+                text-align: left;
+                line-height: 1;
+            }
+            //-----------Кнопка Lets start
+            .price-cards-off-title{
+                margin: 0;
+                display: block;
+                padding: 25px 0;
+                font-size: 16px;
+                font-weight: 400;
+                text-align: center;
+                text-decoration: none;
+                background: @base-green;
+                color:#fff;
+            }
+            .price-cards-off-title::after{
+                content:url('../img/icon_arrow.png');
+                display: inline-block;
+                padding-left: 10px;
+            }
+        }
+        
+    }
+    #standart-wraper{
+        margin: 0 70px;
+    }
+}
+//---------------Правила для карточек
+#premium-on:checked ~ .title-premium-off{
+    z-index: 1;
+    transform: rotateY(0);
+}
+#premium-on:checked ~ .title-premium-on{
+    transform: rotateY(180deg);
+    z-index: -1;
+    box-shadow:none;
+}
+
+#standart-on:checked ~ .title-standart-off{
+    z-index: 1;
+    transform: rotateY(0);
+}
+#standart-on:checked ~ .title-standart-on{
+    transform: rotateY(180deg);
+    z-index: -1;
+    box-shadow:none;
+}
+
+#exclusive-on:checked ~ .title-exclusive-off{
+    z-index: 1;
+    transform: rotateY(0);
+}
+#exclusive-on:checked ~ .title-exclusive-on{
+    transform: rotateY(180deg);
+    z-index: -1;
+    box-shadow:none;
+}
