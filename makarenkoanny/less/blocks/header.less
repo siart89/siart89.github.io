@@ -1,0 +1,97 @@
+.header{
+    //background:url(../img/head_bg.png) left top;
+    //background-repeat: repeat-x;
+    width: 100vw;
+    position: relative;
+       
+    &-menu{
+        width: 95vw;
+        min-height: 193px;
+        margin: 127px auto 0;
+        background-color: #ffd6c3;
+        
+        &-wraper{
+            background: url(../img/head_menu_bg.png) no-repeat bottom center;
+            min-height: inherit;
+            width: inherit;
+            
+            .header-nav{
+                display: flex;
+                justify-content: space-between;
+                padding:8px 20px;
+                .head-logo{
+                    h1{
+                        font-size: 14px;
+                        font-weight: 400;
+                        font-family: 'Pacifico', cursive;
+                        
+                    }
+                    
+                    }
+                .menu-btn{
+                    display: block;
+                    width: 25px;
+                    height: 2px;
+                    background: #000;
+                    position: relative;
+                    cursor: pointer;
+                    margin-top: 3px;
+                        
+                }
+                .menu-btn::after, .menu-btn::before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 25px;
+                    height: 2px;
+                    background: #000;
+                    right: 0;
+                }
+                .menu-btn::before{
+                    top:6px;
+                }
+                .menu-btn::after{
+                    top:12px;
+                }
+            }
+            .header-title{
+                margin-left: 5vw;
+                margin-right: 12vw;
+                padding-bottom: 5vh;
+                p{
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 400;
+                    
+                }
+                
+                
+            }
+            a{
+                text-decoration: none;
+            }
+            .header-btn{
+                display:inline-block;
+                position: absolute;
+                width: 157px;
+                height: 41px;
+                border-radius: 5px;
+                background:#b595e8;
+                font-size:15px;
+                color:#000;
+                text-align: center;
+                bottom: 1.5vh;
+                right: 4vw;
+                
+            }
+            
+        }
+    }
+}
+@media (max-width: 640px){
+     .header-title{
+            padding-bottom: 15vh;}
+    .header-btn{
+        background: red;
+    }
+}
