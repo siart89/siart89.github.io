@@ -1,0 +1,45 @@
+.contacts{
+    background: #f3f3f3;
+    
+    &-box{
+        display: flex;
+        justify-content: center;
+        
+        &-all{
+            max-width: 287px;
+            width: 100%;
+            min-height: 272px;
+            height: 1px;
+            background: #fff;
+            margin-right:40px;
+            text-align: center;
+            &_bg{
+                 min-height: 145px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    max-width: 100%;
+                }
+            }
+            
+            .email-box{
+                background:url(../img/contacts/email.png) no-repeat center top;
+               
+                }
+            .office-box{
+                background:url(../img/contacts/office.png) no-repeat center top;
+                }
+            .phone-box{
+                 background:url(../img/contacts/phone.png) no-repeat center top;
+                }
+             span{
+                display: inline-block;
+                max-width: 75%;
+            }
+        }
+        &-all:last-child{
+            margin-right: 0;
+        }
+    }
+}
