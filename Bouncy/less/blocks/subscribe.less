@@ -1,0 +1,40 @@
+.subscribe{
+    background: url(../img/sub_bg.png) no-repeat center top;
+    h2{
+        color:#fff;
+    }
+    .get-mail{
+        text-align: center;
+        padding-bottom: 100px;
+        form{
+            input{
+                outline: none;
+                box-sizing: border-box;
+                border: none;
+                padding: 0;
+                margin: 0;
+            }
+            #mail-box{
+                display: inline-block;
+                width: 360px;
+                height: 40px;
+                color:@main-text;
+                &::placeholder{
+                    color:#cfd3d4;
+                    font-weight: 400;
+                    padding-left: 20px;
+                }
+            }
+            #submit_btn{
+                display: inline-block;
+                height: 40px;
+                width: 150px;
+                text-transform: uppercase;
+                margin-left: 10px;
+                color:#fff;
+                background-color:@base-green;
+               
+            }
+        }
+    }
+}
