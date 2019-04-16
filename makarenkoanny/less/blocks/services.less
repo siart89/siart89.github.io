@@ -1,0 +1,51 @@
+.services{
+    max-width: 100vw;
+    &-title{
+        text-align: center;
+        padding-top: 30px;
+        h2{
+            font-size: 20px;
+            font-weight: 700;
+            color:#000;
+        }
+    }
+    &-price{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .services-price-example{
+            width: 40%;
+            margin-bottom: 20px;
+            
+            .example-img{
+                max-width: 100%;
+                img{
+                    max-width: 100%;
+                }
+            }
+            .example-img:hover{
+                box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.25);
+            }
+            
+            span{
+                font-size: 13px;
+               
+            }
+            
+        }
+    }
+    .services-btn-wraper{
+       width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        a{
+        text-decoration: none;
+        }
+        a:hover{
+            background:lighten(#b595e8, 5%);
+            color:#000;
+        }
+    }
+    
+}
