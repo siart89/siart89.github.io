@@ -59,6 +59,9 @@
                 }
                 }
             }
+            .nav-bar{
+                display: none;
+            }
             .header-title{
                 margin-left: 5vw;
                 margin-right: 12vw;
@@ -99,7 +102,79 @@
         }
     }
 }
-
+@media(min-width:1199px){
+    .header{
+        max-width: 1280px;
+        margin: 0 auto;
+        padding-bottom: 160px;
+        &-menu{
+        width: 1040px;
+        min-height: 524px;
+        margin: 216px auto 0;
+            &-wraper{
+                background: url(../img/head_menu_bg_big.png) no-repeat bottom left;
+                position: relative;
+                .header-nav{
+                    padding:25px 35px 0 50px;
+                    .head-logo{
+                        max-width: 220px;
+                        h1{
+                            font-size: 25px;}
+                    }
+                
+                    .nav-bar{
+                    display: block;
+                    font-size: 20px;
+                    font-weight: 600;
+                        a{
+                            text-decoration: none;
+                            color:#000;
+                            padding-right: 16px;
+                        }
+                        span{
+                            padding-right: 13px;    
+                        }
+                        a:last-child{
+                            padding-right: 0;    
+                        }
+                        a:hover{
+                            background: none;
+                           text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+                        }
+                        
+                        
+                }
+                    .menu-btn-wraper{
+                    display: none;
+                }
+                }
+                .header-title{
+                    max-width: 550px;
+                    float: right;
+                    margin-right: 100px;
+                    font-size: 20px;
+                    padding: 0;
+                    position: relative;
+                    p{
+                        display: inline;
+                    }
+                    strong{
+                        font-weight: 600;
+                    }
+                }
+                .header-btn{
+                    bottom:235px;
+                    right: 50px;
+                    width: 285px;
+                    height: 52px;
+                    font-size: 25px;
+                    line-height: 50px;
+                }
+            }
+    }
+}
+}
+    
 @media(max-width: 365px) {
       .header-title{
         padding-bottom: 7vh !important;

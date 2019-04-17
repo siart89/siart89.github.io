@@ -31,9 +31,56 @@
         margin: 30px auto;
         max-width: 95vw;
        
-        iframe{
+        #map_big{
             width: 95vw;
             max-height: 230px;
+        }
+       
+    }
+}
+
+@media(min-width:1199px){
+    .contact{
+        max-width: 1280px;
+        margin: 0 auto;
+        &-title-main{
+        
+            h3{
+                font-size: 25px;
+                
+            }
+        }
+        &-title-offer{
+            max-width: 100%;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            p{
+                margin: 0;
+            }
+            .offer-box{
+                padding: 0;
+                max-width: 338px;
+                &-img{
+                    margin-bottom: 10px;
+                img{
+                    max-width: 70px;
+                    height: 70px;
+                }
+            }
+            }
+            .star-box{
+                margin-right: 40px;
+            }
+        }
+        }
+    .map-box{
+        width: 1040px;
+        margin-top: 50px !important;
+        margin-bottom: 76px !important;
+        #map_big{
+            width: 1040px !important;
+            max-height: 370px !important;
         }
     }
 }

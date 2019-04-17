@@ -11,10 +11,12 @@
         padding: 8px 0 12px;
         .foot-logo{
             max-width: 130px;
-            h1{
+            a{
+                text-decoration: none;
                 font-size: 14px;
                 font-weight: 400;
                 font-family: 'Pacifico', cursive;
+                color:#000;
             }
         }
         .foot-nav-btn{
@@ -45,6 +47,47 @@
             span::after{
             top:16px;
                 }
+        }
+        .footer-nav-bar{
+            display: none;
+        }
+    }
+}
+
+@media(min-width:1199px){
+    .footer{
+        max-width: 1280px;
+        margin: 0 auto;
+        .foot-nav-box{
+            width: 100%;
+            .foot-logo{
+                max-width: 220px;
+                margin-left: 120px;
+                a{
+                    font-size: 25px;
+                }
+            }
+            .footer-nav-bar{
+                display: block;
+                margin-right: 120px;
+                a{
+                    text-decoration: none;
+                    color:#000;
+                    padding-right: 16px;
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+                a:last-child{
+                    padding-right: 0;    
+                }
+                a:hover{
+                    background: none;
+                   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+                }
+        }
+            .foot-nav-btn{
+                display: none;
+            }
         }
     }
 }
