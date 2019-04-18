@@ -4,10 +4,12 @@
     margin: 200px auto;
     border:1px solid #8b929b;
     background: rgba(255, 214, 195, 0.5);
+    text-align: center;
     form{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 25px;
         legend{
             font-size: 15px;
             text-align: center;
@@ -43,6 +45,42 @@
             border: none;
             line-height: 50px;
             margin-bottom: 29px;
+        }
+    }
+    a{
+        text-decoration: none;
+        color:#000;
+        font-size: 14px;
+        
+    }
+    a:hover{
+        color: #8b929b;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25); 
+    }
+}
+@media(max-width:792px){
+    .email__box{
+        width: 287px;
+        height: 293px;
+        form{
+             margin-bottom: 15px !important;
+        }
+        legend{
+            margin-bottom: 17px !important;
+            margin-top: 21px !important;
+        }
+        input{
+            width: 206px !important;
+        }
+        .data__btn{
+            width: 157px !important;
+            height: 41px !important;
+            line-height: 40px !important;
+            margin-bottom: 20px !important;
+            font-size: 20px !important;
+        }
+        #data__phone{
+            margin-bottom: 27px !important;
         }
     }
 }
