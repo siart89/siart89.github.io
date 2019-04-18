@@ -20,6 +20,9 @@
                 display: flex;
                 justify-content: space-between;
                 padding:8px 20px;
+                input{
+                    display: none;
+                }
                 .head-logo{
                     h1{
                         font-size: 14px;
@@ -32,6 +35,10 @@
                 .menu-btn-wraper{
                     height: 22px;
                     cursor: pointer;
+                    margin-bottom: 0;
+                    position: absolute;
+                    right:5vw;
+                    top:8px;
                     .menu-btn{
                     display: block;
                     width: 25px;
@@ -58,9 +65,61 @@
                     top:12px;
                 }
                 }
+                #show{
+                    z-index: 99;
+                }
+                #close{
+                    z-index: -1;
+                }
+                #show_nav_bar:checked ~ .nav-bar{
+                    display: block;
+                    position: absolute;
+                    font-size: 12px;
+                    top:28px;
+                    right: 5vw;
+                    background: #fff;
+                    border-radius: 5px;
+                    a{
+                        padding-left: 10px;
+                    }
+                }         
+                #show_nav_bar:checked ~ .nav-bar #phone{
+                    display: none;
+                }
+                #show_nav_bar:checked ~ #show{                z-index: -1;
+                }
+                #show_nav_bar:checked ~ #close{                z-index: 99;
+                }
+                
+                #close_nav_bar:checked ~ .nav-bar{
+                    display: none;
+                }
+                
+                
+                
+                
+                
+                
+                
+                
+                
             }
             .nav-bar{
                 display: none;
+                transition: 0.4s ease-in-out;
+                a{
+                    text-decoration: none;
+                    color:#000;
+                    padding-right: 10px;
+                        } 
+                
+                a:last-child{
+                    padding-right: 3px;    
+                        }
+                a:hover{
+                    background: none;
+                    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+                        }
             }
             .header-title{
                 margin-left: 5vw;
@@ -72,6 +131,7 @@
                     font-weight: 400;
                     
                 }
+                
                 
                 
             }
@@ -121,7 +181,9 @@
                         h1{
                             font-size: 25px;}
                     }
-                
+                #close_nav_bar:checked ~ .nav-bar{
+                    display: block;
+                }
                     .nav-bar{
                     display: block;
                     font-size: 20px;
