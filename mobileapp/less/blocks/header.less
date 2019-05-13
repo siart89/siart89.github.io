@@ -1,0 +1,108 @@
+.header{
+    margin: 0 auto;
+    background: url('../img/header/background.png') no-repeat center bottom;
+    height: 755px;
+    position: relative;
+    &__contanier{
+        margin: 0 auto;
+        padding-top: 30px;
+        .nav_menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background: #fff;
+            height: 80px;
+            .nav__menu__logo{
+                display: flex;
+                align-items: center;
+                img{
+                    max-width: 30%;
+                }
+                span{
+                    font-size: 30px;
+                    color:#1ab798;
+                    padding-left: 15px;
+                }
+            }
+            
+            .nav__bar{
+                
+                ul{
+                    display: flex;
+                    li{
+                        
+                        a{
+                            display: block;
+                            color: @main-text;
+                            padding: 20px;
+                            text-transform: uppercase;
+                            font-size: 13px;
+                            font-weight: 700;
+                            transition:transform 0.3s;
+                        }
+                        a:last-child{
+                            padding-right: 35px;
+                        }
+                    }
+                    li:hover a{
+                         color:#282528;
+                         transform: scale(1.5);
+                    }
+                }
+            }
+        }
+        .header__content{
+            margin-top: 170px;
+            color:#fff;
+            &__title{
+                p{
+                    margin-bottom: 50px;
+                    b{
+                        font-size: 42px;
+                    }
+                    span{
+                        font-size: 22px;
+                    }
+                }  
+                li{
+                    padding-bottom: 25px;
+                    font-size: 16px;
+                }
+                li:last-child{
+                    padding-bottom: 0;
+                }
+                li::before{
+                    content: url('../img/header/arrow.png');
+                    display: inline-block;
+                    padding-right: 15px;
+                }
+            }
+            &__btn{
+                display: block;
+                font-size: 20px;
+                background-color:#17d0ac;
+                max-width: 210px;
+                color:#fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                border-radius: 7px;
+                margin-top: 70px;
+                transition: 0.2s;
+                img{
+                    padding-left: 20px;
+                }
+                span{
+                    padding: 15px 35px 15px 18px;
+                    font-weight: 600;
+                }
+
+            }
+            &__btn:hover{
+                background-color:lighten(#17d0ac, 10%);
+            }
+        }
+    }
+}
