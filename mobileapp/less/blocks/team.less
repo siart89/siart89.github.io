@@ -1,0 +1,86 @@
+.team_contanier{
+
+    .team_profiles{
+        display: flex;
+        padding-top: 105px;
+        
+        .person__profile{
+            margin-right: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3{
+                color:#1eb99a;
+                font-size: 18px;
+                padding: 20px 0 18px;
+            }
+            span{
+                font-size: 13px;
+                color:#a7abb0;
+            }
+            .person__photo{
+                position: relative;
+                max-height:300px; 
+                .photo__card{
+                    max-width: 100%;
+                }
+                .backside__profile{
+                    position: absolute;
+                    max-width: 100%;
+                    height: 100%;
+                    top:0;
+                    font-size: 16px;
+                    overflow: hidden;
+                    background-color:rgba(44, 186, 159, 0.8);
+                    display: none;
+                    h4{
+                        padding-top: 24px;
+                    }
+                    p{
+                        padding: 22px 20px 30% 30px;
+                        color:#fff;
+
+                    }
+                    .share{
+                        display: flex;
+                        justify-content: center;
+                        a{
+                            display: flex;
+                            background: rgba(0, 0, 0, 0.5 );
+                            width:42px;
+                            height: 42px;
+                            align-items: center;
+                            justify-content: center;
+                            img{
+                                transition: 0.3s;
+                            }
+                        }
+                        a:nth-child(2){
+                            margin: 0 5px;
+                        }
+                        a:hover{
+                            background: lighten(rgba(0, 0, 0, 0.5 ), 15%);
+                        }
+                        a:hover img{
+                            transform: scale(1.2); 
+                        }
+                    }
+                    
+                }
+                #third_person{
+                    max-width: 99%;
+                }
+            }
+            .person__photo:hover .backside__profile{
+                display: block;
+            }
+
+            
+        }
+        .person__profile:last-child{
+            margin-right: 0;
+        }
+    }
+}
