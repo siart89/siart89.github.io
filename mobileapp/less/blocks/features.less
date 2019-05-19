@@ -54,7 +54,8 @@
             flex-direction: column;
             
             &_title{
-               width: 60%;
+               /*width: 60%;*/
+               padding-left: 60px;
                 a{
                     color:#000;
                 }
@@ -70,9 +71,11 @@
                 }
                 span{
                     font-size:13px;
-                    max-width: 98%;
+                    max-width: 245px;
                     display: block;
                     line-height: 1.5;
+                    word-spacing: 1px;
+
                 }
             }
             #icon_1::before{
@@ -80,7 +83,7 @@
                 display: inline-block;
                 position: absolute;
                 top: 0;
-                left: -35%;
+                left:-60px;
                 
             }
             #icon_2::before{
@@ -88,7 +91,7 @@
                 display: inline-block;
                 position: absolute;
                 top: 0;
-                left: -35%;
+                left: -60px;
                 
             }
             #icon_3::before{
@@ -96,7 +99,7 @@
                 display: inline-block;
                 position: absolute;
                 top: 0;
-                left: -35%;
+                left: -60px;
                 
             }
             #icon_4::before{
@@ -104,7 +107,7 @@
                 display: inline-block;
                 position: absolute;
                 top: 0;
-                left: -35%;
+                left: -60px;
                 
             }
             #icon_5::before{
@@ -112,7 +115,7 @@
                 display: inline-block;
                 position: absolute;
                 top: 0;
-                left: -35%;
+                left: -60px;
                 
             }
             #icon_6::before{
@@ -120,7 +123,7 @@
                 display: inline-block;
                 position: absolute;
                 top: 0;
-                left: -35%;
+                left: -60px;
                 
             }
             .features__icon::before{
@@ -141,10 +144,19 @@
             }
             
         }
+        #sec__description__block{
+            margin-right: 30px;
+        }
         .features__description__screen{
-            width: 40%;
+            /*width: 40%;
             margin-right: 100px;
-            margin-left: 20px;
+            margin-left: 20px;*/
+            padding-right: 40px;
+            padding-left: 40px;
+            
+            img{
+                max-width: 100%;
+            }
         }
         
     }
