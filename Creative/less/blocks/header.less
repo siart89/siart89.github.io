@@ -1,0 +1,86 @@
+
+
+.header{
+    background: url('../img/head_bg.png') no-repeat center top;
+    padding-bottom: 500px;
+    hr{
+        background-color:#797979;
+        height: 1px;
+        border:none;
+        margin-top: 10px;
+    }
+    .navMenu{
+        display: flex;
+        align-items: baseline;
+        padding-top: 20px;
+        justify-content: space-between;
+       
+        &__logo{
+            width: 67px;
+            height: 67px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #11749e;
+            box-shadow: 12px 8px 0 rgba(214, 214, 214, 0.7);
+            font-weight: 700;
+        
+            span{
+                color:#fff;
+                font-size: 30.5px;
+            }
+
+        }
+
+        &__item{
+            padding-left: 250px;
+            ul{
+                display: flex;
+               
+                li{
+                    padding-right: 45px;
+                    
+
+                    a{
+                        color:#fff;
+                        font-size: 20px;
+                        font-family: Myriad Pro Regular;
+                        position: relative;
+                        
+                       
+                    }
+                    a:hover::after{
+                        content: "";
+                        display:block;
+                        width: 100%;
+                        height: 3px;
+                        border:none;
+                        background-color: #11749e;
+                        position: absolute;
+                        top:45px;
+                        animation: line 0.4s  ease-in-out;
+                    }
+                                        
+                }              
+               
+            }
+        }
+        &__shareItem{
+           
+            a{
+
+                img{
+                    padding-right: 30px;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+   
+}
+
+
+@keyframes line {
+    from {width: 0;}
+    to {width: 100%;}
+}
