@@ -1,0 +1,18 @@
+@font-face{
+    font-family: 'Gotham';
+    src: url(../fonts/Gotham.otf);
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'Gotham Pro';
+    src: url(../fonts/Gotham\ Pro.ttf);
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'Gotham Medium';
+    src:url(../fonts/Gotham\ Medium.otf);
+}
+@font-face{
+    font-family: 'Roboto Cn';
+    src: url(../fonts/Roboto\ Cn.ttf);
+}

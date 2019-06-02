@@ -2,7 +2,7 @@
 
 .header{
     background: url('../img/head_bg.png') no-repeat center top;
-    padding-bottom: 500px;
+   
     hr{
         background-color:#797979;
         height: 1px;
@@ -76,6 +76,74 @@
             }
         }
     }
+    .mainTitle{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-transform: uppercase;
+        font-family: 'Gotham';
+        padding-top: 28vh;
+        
+        h1{
+            color:#fff;
+            font-weight: 700;
+            font-size: 11em;
+            
+        }
+
+        span{
+            color:#11749e;
+            font-size: 1.8em;
+            font-weight: 400;
+            letter-spacing: 19px;
+            word-spacing: 40xp;
+
+        }
+    }
+    .scrollButton{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 12vh;
+        padding-bottom: 10vh;
+        
+        span{
+            color: #fff;
+            padding-bottom: 20px;
+            font-size: 13px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+        }
+        &__btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border:1px solid #fff;
+            border-radius: 50%;
+            width: 65px;
+            height: 65px;
+            position: relative;
+            overflow: hidden;
+
+            img{
+                z-index: 2;
+            }
+
+        }
+        &__btn:hover::after{
+            content: "";
+            display: block;
+            position: absolute;
+            top:0;
+            background-color: #11749e;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            animation: scroll 0.7s ease-in-out;
+            
+        }
+    }
    
 }
 
@@ -83,4 +151,8 @@
 @keyframes line {
     from {width: 0;}
     to {width: 100%;}
+}
+@keyframes scroll {
+    from {top: -100%;}
+    to {top: 0;}
 }
