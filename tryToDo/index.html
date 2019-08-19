@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>My NewProject</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Roboto:100,400,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/fontAwesome.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="header_contacts">
+            <div class="header_contacts-wrapper contanier d-flex">
+                <a href="tel:+380963092145" class="header_contacts__phone">+38 (096) 309 21 45</a>
+                <a href="#" class="header_contacts__email">layout585@gmail.com</a>
+                <a href="#" class="button header_contacts__btn">Бесплатная консультация</a>
+
+            </div>
+
+        </div>
+        <div class="header_nav">
+            <div class="header_nav-wrapper contanier d-flex">
+                <a href="#" class="header_nav__logo">
+                    <img src="./img/logo.png" alt="Logo">
+                </a>
+                <div class="header_nav__list">
+                    <ul>
+                        <li class="header_nav__item">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li class="header_nav__item">
+                            <a href="#">О компании</a>
+                        </li>
+                        <li class="header_nav__item">
+                            <a href="#">Услуги</a>
+                        </li>
+                        <li class="header_nav__item">
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="freeConsult_window">
+        <div class="form_wrapper">
+            <div class="close"></div>
+            <form class="consultation grid_form coll">
+                <label for="usr_name" id="name"><span>Имя</span></label><input type="text" name="name"
+                    class="consultation_input usr_name" id="usr_name">
+                <label for="usr_phone" id="phone"><span>Телефон</span></label><input type="text" name="phone"
+                    class="consultation_input usr_phone" id="usr_phone">
+                <button class="consultation_btn sub_btn">Отправить</button>
+            </form>
+        </div>
+
+    </div>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>

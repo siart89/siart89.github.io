@@ -1,0 +1,88 @@
+.header_contacts{
+    background-color: #303030;
+   
+
+    &-wrapper {
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 45px;
+        a{
+            display: block;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            position: relative;
+        }
+    }
+    &__phone,
+    &__email{
+        color:#d3d2d2;
+        font-size: 14px;
+        letter-spacing: 0.25px;
+    }
+    &__phone{
+        padding-left: 16px;
+        padding-right: 33px;
+    }
+    &__phone::before{
+        content: '\f095';
+        font-family: 'icomoon';
+        position: absolute;
+        left: 0;
+        color:@orange;
+    }
+    &__email{
+        padding-left: 15px;  
+    }
+    &__email::before{
+        content: "\f003";
+        font-family: 'icomoon';
+        position: absolute;
+        left: -4px;
+        top:-1px;
+        color:@orange;
+    }
+    &__btn{
+        margin-left: auto ;
+        line-height: 45px;
+        background-color: @orange;
+        color:#1b1b1b;
+        padding: 0 40px 0 48px;
+        font-size: 16px;
+    }
+    &__btn::before{
+        content: "\f0b1";
+        font-family: 'icomoon';
+        position: absolute;
+        left: 20px;
+        color:#1b1b1b;
+    }
+}
+.header_nav{
+    &-wrapper{
+        padding-top: 36px;
+        padding-bottom: 33px;
+    }
+    &__list{
+        margin-left: auto;
+    }
+    &__item{
+        display: inline-block;
+        border:1px solid transparent;
+        padding: 10px 16px 11px 17px;
+        margin-left: 12px;
+        transition: border 0.3s;
+        
+        a{
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color:#323232;
+        }
+    }
+    &__item:nth-child(1){
+        margin-left: 0;
+    }
+    &__item:hover{
+        border-color:@orange;
+    }
+}
