@@ -60,7 +60,8 @@
 .header_nav{
     &-wrapper{
         padding-top: 36px;
-        padding-bottom: 33px;
+        padding-bottom: 24px;
+        align-items: center;
     }
     &__list{
         margin-left: auto;
@@ -84,5 +85,46 @@
     }
     &__item:hover{
         border-color:@orange;
+    }
+}
+
+.header_content{
+    background: url('../../img/header_logo.jpg') no-repeat center / cover;
+    .header_slider {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 120px;
+        padding-bottom: 185px;
+        
+        &__title{
+            font-size: 32px;
+            letter-spacing: 1px;
+            line-height: 36px;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            color:#fff;
+        }
+        &__description{
+            font-size: 18px;
+            font-family: 'PT Serif', serif;
+            font-weight: 400;
+            color: #d3d2d2;
+            text-align: center;
+            line-height: 24px;
+            margin-top: 23px;
+            margin-bottom: 40px;
+            span{
+                max-width: 620px;
+                display: inline-block;
+            }
+        }
+        
+    }
+    .main_btn{
+        color:#fff;
+        font-size: 14px;
+        letter-spacing: 0.25px;
     }
 }

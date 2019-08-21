@@ -22,6 +22,17 @@ body {
 a {
   text-decoration: none;
 }
+.d-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(633px, auto) minmax(295px, auto) minmax(515px, auto) minmax(285px, auto) minmax(660px, auto) minmax(338px, auto) minmax(45px, auto);
+}
+.button {
+  padding: 12px 19px 14px 19px ;
+  display: block;
+  border: 1px solid #ffc222;
+  border-right-width: 21px;
+}
 .header_contacts {
   background-color: #303030;
 }
@@ -81,7 +92,8 @@ a {
 }
 .header_nav-wrapper {
   padding-top: 36px;
-  padding-bottom: 33px;
+  padding-bottom: 24px;
+  align-items: center;
 }
 .header_nav__list {
   margin-left: auto;
@@ -104,6 +116,44 @@ a {
 }
 .header_nav__item:hover {
   border-color: #ffc222;
+}
+.header_content {
+  background: url('../../img/header_logo.jpg') no-repeat center / cover;
+}
+.header_content .header_slider {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 185px;
+}
+.header_content .header_slider__title {
+  font-size: 32px;
+  letter-spacing: 1px;
+  line-height: 36px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #fff;
+}
+.header_content .header_slider__description {
+  font-size: 18px;
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  color: #d3d2d2;
+  text-align: center;
+  line-height: 24px;
+  margin-top: 23px;
+  margin-bottom: 40px;
+}
+.header_content .header_slider__description span {
+  max-width: 620px;
+  display: inline-block;
+}
+.header_content .main_btn {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.25px;
 }
 .freeConsult_window {
   display: none;
@@ -251,5 +301,5 @@ a {
 }
 .transform {
   transform: perspective(0px) translate(-50%, 0px) translateZ(0px) !important;
-  transition: all 1.5s ease-out;
+  transition: all 0.9s ease-out;
 }
