@@ -25,3 +25,33 @@ function showFreeConsult() {
 };
 
 showFreeConsult();
+
+// Слайдер ХЕДЕРА
+
+function moveHeaderSlider() {
+    const leftBtn = document.querySelector('.left_btn'),
+        rightBtn = document.querySelector('.right_btn'),
+        allSlider = document.querySelectorAll('.header_slider'),
+        sliderWrapper = document.querySelector('.slider_wrapper');
+    let shift = 0;
+
+    sliderWrapper.addEventListener('click', (e) => {
+        if (!(e.target == leftBtn || e.target == rightBtn)) return;
+
+        if (e.target == leftBtn) {
+            shift -= 100;
+        } else {
+            if (shift === 0) {
+                shift = -100 * (allSlider.length - 1);
+            } else {
+                shift += 100;
+            };
+        };
+        if (Math.abs(shift) > 100 * (allSlider.length - 1)) shift = 0;
+
+        allSlider.forEach(function (elem) {
+            elem.style.transform = `translateX(${shift}%)`;
+        });
+    });
+};
+moveHeaderSlider();
