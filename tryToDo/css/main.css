@@ -32,6 +32,7 @@ a {
   display: block;
   border: 1px solid #ffc222;
   border-right-width: 21px;
+  position: relative;
 }
 .button::after {
   content: "\f105";
@@ -39,6 +40,7 @@ a {
   font-family: 'icomoon';
   right: -14px;
   z-index: 10;
+  color: #fff;
 }
 .header_contacts {
   background-color: #303030;
@@ -193,6 +195,10 @@ a {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+.header_content .sliderBtn:hover {
+  background-color: #ffc222;
 }
 .header_content .left_btn::before {
   content: "\f104";
@@ -214,6 +220,99 @@ a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.services {
+  padding-top: 60px;
+}
+.services_content {
+  justify-content: flex-start;
+  padding-bottom: 62px;
+  padding-left: 135px;
+  align-items: center;
+}
+.services_content__title {
+  max-width: 380px;
+  position: relative;
+}
+.services_content__title h2 {
+  font-size: 24px;
+  line-height: 24px;
+  color: #212020;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  padding-bottom: 12px;
+}
+.services_content__title span {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+  font-family: 'PT Serif', serif;
+}
+.services_content .allServices_btn {
+  margin-left: auto;
+}
+.services_content .allServices_btn #showServices {
+  padding: 4px 30px 5px 33px;
+  display: block;
+  border: 3px solid #e6e6e6;
+  color: #373636;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 24px;
+}
+.services_content__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 105px;
+  height: 2px;
+  background-color: #ffc222;
+  top: 10px;
+  left: -137px;
+}
+.services_unit {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(60px, auto) minmax(130px, 1fr) minmax(45px, auto);
+  grid-template-areas: "defaulter lawyer tax" "defTitle lawTitle taxTitle" "defBtn lawBtn taxBtn";
+  column-gap: 30px;
+  text-align: center;
+}
+.services_unit #defaulter {
+  grid-area: defaulter;
+}
+.services_unit #lawyer {
+  grid-area: lawyer;
+}
+.services_unit #tax {
+  grid-area: tax;
+}
+.services_unit #defTitle {
+  grid-area: defTitle;
+}
+.services_unit #lawTitle {
+  grid-area: lawTitle;
+}
+.services_unit #taxTitle {
+  grid-area: taxTitle;
+}
+.services_unit #defBtn {
+  grid-area: defBtn;
+}
+.services_unit #lawBtn {
+  grid-area: lawBtn;
+}
+.services_unit #taxBtn {
+  grid-area: taxBtn;
+}
+.services .description_more {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.services .left_side {
+  margin-left: auto;
 }
 .freeConsult_window {
   display: none;

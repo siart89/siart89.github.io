@@ -35,6 +35,7 @@ a{
     display: block;
     border: 1px solid @orange;
     border-right-width: 21px;
+    position: relative;
 }
 .button::after{
     content:"\f105";
@@ -42,9 +43,11 @@ a{
     font-family: 'icomoon';
     right: -14px;
     z-index: 10;
+    color: #fff;
 }
 
 @orange:#ffc222;
 
 @import url('./blocks/header.less');
+@import url('./blocks/services.less');
 @import url('./blocks/modalWindow.less');

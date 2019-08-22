@@ -1,0 +1,101 @@
+.services{
+    padding-top: 60px;
+    &_content{
+        justify-content: flex-start;
+        padding-bottom: 62px;
+        padding-left: 135px;
+        align-items: center;
+        &__title{
+            max-width: 380px;
+            position: relative;
+            h2{
+                font-size: 24px;
+                line-height: 24px;
+                color:#212020;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                padding-bottom: 12px;
+            }
+            span{
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.1px;
+                font-family: 'PT Serif', serif;
+            }
+        }
+        .allServices_btn{
+            margin-left: auto;
+            
+            #showServices{
+                padding: 4px 30px 5px 33px;
+                display: block;
+                border: 3px solid #e6e6e6;
+                color:#373636;
+                font-size: 14px;
+                letter-spacing: 0.25px;
+                font-family: 'Roboto', sans-serif;
+                line-height: 24px;
+            }
+        }
+        &__title::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 105px;
+            height: 2px;
+            background-color: @orange;
+            top: 10px;
+            left: -137px;
+        }
+    }
+    &_unit{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: minmax(60px, auto) minmax(130px, 1fr) minmax(45px, auto);
+        grid-template-areas: 
+        "defaulter lawyer tax"
+        "defTitle lawTitle taxTitle"
+        "defBtn lawBtn taxBtn"; 
+        column-gap: 30px; 
+        text-align: center;
+
+        #defaulter{
+            grid-area: defaulter;
+        }
+        #lawyer{
+            grid-area: lawyer;
+        }
+        #tax{
+            grid-area: tax;
+        }
+        #defTitle{
+            grid-area: defTitle;
+        }
+        #lawTitle{
+            grid-area: lawTitle;
+        }
+        #taxTitle{
+            grid-area: taxTitle;
+        }
+        #defBtn{
+            grid-area: defBtn;
+        }
+        #lawBtn{
+            grid-area: lawBtn;
+        }
+        #taxBtn{
+            grid-area: taxBtn;
+        }
+        
+    }
+    .description_more{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+       
+    }
+    .left_side{
+        margin-left: auto;
+    }
+}
+
