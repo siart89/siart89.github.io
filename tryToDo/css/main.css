@@ -125,7 +125,7 @@ a {
   border-color: #ffc222;
 }
 .header_content {
-  background: url('../../img/header_logo.jpg') no-repeat center / cover;
+  background: url('../img/header_logo.jpg') no-repeat center / cover;
 }
 .header_content .slider_wrapper {
   position: relative;
