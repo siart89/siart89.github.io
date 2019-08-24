@@ -58,6 +58,58 @@
         "defBtn lawBtn taxBtn"; 
         column-gap: 30px; 
         text-align: center;
+        
+       
+       
+        &__description{
+            padding: 30px 44px 60px 44px;
+            
+        }
+        .description_img{
+            border-top: 1px solid #f1f1f1;
+            padding-top: 40px;
+        }
+        .description_more{
+            border-bottom: 1px solid #f1f1f1;
+            padding: 0 40px 40px 40px;
+            &__btn{
+                .order_btn{
+                    padding: 12px 25px 12px 31px;
+                    font-size: 14px;
+                    color:#373636;
+                    letter-spacing: 0.25px;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight:500;
+                }
+            }
+            &__detail{
+                a{
+                    color: #050505;
+                    font-size: 14px;
+                    line-height: 18px;
+                    font-family: 'Roboto', sans-serif;
+                    position: relative;
+                    display: block;
+                   
+                }
+                
+                a::before{
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #656565;
+                    position: absolute;
+                    bottom: 2px;
+                }
+            }
+        }
+        .allItemsettings{
+            background-color:#f9f9f9;
+            border-left: 1px solid #f1f1f1;
+            border-right: 1px solid #f1f1f1;
+           
+        }
 
         #defaulter{
             grid-area: defaulter;
