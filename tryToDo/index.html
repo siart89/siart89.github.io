@@ -116,7 +116,7 @@
             </div>
         </header>
         <section class="services">
-            <div class="contanier">
+            <div class="contanier services_wrapper">
                 <div class="services_content d-flex">
                     <div class="services_content__title">
                         <h2>Наши Услуги</h2>
@@ -129,101 +129,81 @@
                 </div>
                 <!-- ДЕТАЛИ УСЛУГ -->
                 <div class="services_unit">
-                    <!-- Лого услуги -->
-                    <div class="description_img allItemsettings" id="defaulter">
-                        <img src="./img/hammer.png" alt="hammer">
-                    </div>
-                    <!-- Конец лого услуги -->
-                    <!-- Описание услуги-->
-                    <div class="services_unit__description allItemsettings" id="defTitle">
-                        <h3>Банкротство и ликвидация</h3>
-                        <p>Полное прекращение существования юридического лица с сохранением легальности всей предыдущей
-                            деятельности</p>
-                    </div>
-                    <!-- Конец Описания услуги -->
-                    <!-- Кнопки детальной информации Услуги -->
-                    <div class="description_more allItemsettings" id="defBtn">
-                        <div class="description_more__detail">
-                            <a href="#">Подробнее</a>
+
+                    <div class="services_description grid-col" id="first">
+                        <!-- Лого услуги -->
+                        <div class="description_img" id="defaulter">
+                            <img src="./img/hammer.png" alt="hammer">
                         </div>
-                        <div class="description_more__btn left_side">
-                            <a href="#" class="button order_btn">Заказать</a>
+                        <!-- Конец лого услуги -->
+                        <!-- Описание услуги-->
+                        <div class="services_unit__description" id="defTitle">
+                            <h3>Банкротство и ликвидация</h3>
+                            <p>Полное прекращение существования юридического лица с сохранением легальности всей
+                                предыдущей
+                                деятельности</p>
                         </div>
-                    </div>
-                    <!-- Конец Кнопки детальной информации Услуги -->
-                    <div class="description_img allItemsettings" id="lawyer">
-                        <img src="./img/capitol.png" alt="capitol">
-                    </div>
-                    <!-- Конец лого услуги -->
-                    <!-- Описание услуги-->
-                    <div class="services_unit__description allItemsettings" id="lawTitle">
-                        <h3>Адвокатское сопровождение</h3>
-                        <p>Мы гарантируем полное профессиональное обслуживание клиентов в заявленных сферах деятельности и соблюдение конфиденциальности.</p>
-                    </div>
-                    <!-- Конец Описания услуги -->
-                    <!-- Кнопки детальной информации Услуги -->
-                    <div class="description_more allItemsettings" id="lawBtn">
-                        <div class="description_more__detail">
-                            <a href="#">Подробнее</a>
-                        </div>
-                        <div class="description_more__btn left_side">
-                            <a href="#" class="button order_btn">Заказать</a>
-                        </div>
-                    </div>
-                    <!-- Конец Кнопки детальной информации Услуги -->
-                    <div class="description_img allItemsettings" id="tax">
-                        <img src="./img/case.png" alt="case">
-                    </div>
-                    <!-- Конец лого услуги -->
-                    <!-- Описание услуги-->
-                    <div class="services_unit__description allItemsettings" id="taxTitle">
-                        <h3>Налоговый аудит</h3>
-                        <p>Налоговый аудит проводят перед проведением налоговых проверок; при оценке возможных налоговых рисков; при оптимизации налогообложения.</p>
-                    </div>
-                    <!-- Конец Описания услуги -->
-                    <!-- Кнопки детальной информации Услуги -->
-                    <div class="description_more allItemsettings" id="taxBtn">
-                        <div class="description_more__detail">
-                            <a href="#">Подробнее</a>
-                        </div>
-                        <div class="description_more__btn left_side">
-                            <a href="#" class="button order_btn">Заказать</a>
-                        </div>
-                    </div>
-                    <!-- Конец Кнопки детальной информации Услуги -->
-                    <!-- <div class="services_unit__description">
-                        <div class="description_img">
-                            <img src="./img/capitol.png" alt="hammer">
-                        </div>
-                        <h3>Адвокатское сопровождение</h3>
-                        <p>Мы гарантируем полное профессиональное обслуживание клиентов в заявленных сферах
-                            деятельности и соблюдение
-                            конфиденциальности.</p>
-                        <div class="description_more">
+                        <!-- Конец Описания услуги -->
+                        <!-- Кнопки детальной информации Услуги -->
+                        <div class="description_more" id="defBtn">
                             <div class="description_more__detail">
                                 <a href="#">Подробнее</a>
                             </div>
-                            <div class="description_more__btn">
-                                <a href="#" class="button">Заказать</a>
+                            <div class="description_more__btn left_side">
+                                <a href="#" class="button order_btn">Заказать</a>
                             </div>
                         </div>
+                        <!-- Конец Кнопки детальной информации Услуги -->
                     </div>
-                    <div class="services_unit__description">
-                        <div class="description_img">
-                            <img src="./img/case.png" alt="hammer">
+                    <div class="services_description grid-col">
+                        <div class="description_img" id="lawyer">
+                            <img src="./img/capitol.png" alt="capitol">
                         </div>
-                        <h3>Налоговый аудит</h3>
-                        <p>Налоговый аудит проводят перед проведением налоговых проверок; при оценке возможных
-                            налоговых рисков; при оптимизации налогообложения.</p>
-                        <div class="description_more">
+                        <!-- Конец лого услуги -->
+                        <!-- Описание услуги-->
+                        <div class="services_unit__description" id="lawTitle">
+                            <h3>Адвокатское сопровождение</h3>
+                            <p>Мы гарантируем полное профессиональное обслуживание клиентов в заявленных сферах
+                                деятельности и соблюдение конфиденциальности.</p>
+                        </div>
+                        <!-- Конец Описания услуги -->
+                        <!-- Кнопки детальной информации Услуги -->
+                        <div class="description_more" id="lawBtn">
                             <div class="description_more__detail">
                                 <a href="#">Подробнее</a>
                             </div>
-                            <div class="description_more__btn">
-                                <a href="#" class="button">Заказать</a>
+                            <div class="description_more__btn left_side">
+                                <a href="#" class="button order_btn">Заказать</a>
                             </div>
                         </div>
-                    </div> -->
+                        <!-- Конец Кнопки детальной информации Услуги -->
+                    </div>
+
+                    <div class="services_description grid-col">
+                        <div class="description_img " id="tax">
+                            <img src="./img/case.png" alt="case">
+                        </div>
+                        <!-- Конец лого услуги -->
+                        <!-- Описание услуги-->
+                        <div class="services_unit__description " id="taxTitle">
+                            <h3>Налоговый аудит</h3>
+                            <p>Налоговый аудит проводят перед проведением налоговых проверок; при оценке возможных
+                                налоговых рисков; при оптимизации налогообложения.</p>
+                        </div>
+                        <!-- Конец Описания услуги -->
+                        <!-- Кнопки детальной информации Услуги -->
+                        <div class="description_more" id="taxBtn">
+                            <div class="description_more__detail">
+                                <a href="#">Подробнее</a>
+                            </div>
+                            <div class="description_more__btn left_side">
+                                <a href="#" class="button order_btn">Заказать</a>
+                            </div>
+                        </div>
+                        <!-- Конец Кнопки детальной информации Услуги -->
+                    </div>
+
+
                 </div>
         </section>
     </div>
