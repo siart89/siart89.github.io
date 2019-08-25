@@ -1,0 +1,148 @@
+.advice{
+    &_bg{
+        background: url(../img/woman.png) no-repeat right bottom;
+    }
+    &_titleWrapper{
+        padding-top: 43px;
+    }
+    &_form{
+        font-style: 14px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        form{
+            display: grid;
+            grid-template-columns: minmax(260px, auto) 1fr minmax(230px, auto);
+            grid-template-rows: repeat(4, 75px);
+            grid-template-areas: 
+            "email message message"
+            "phone message message"
+            "name message message"
+            "topic ... button";
+            max-width: 850px;
+            .input_heading{
+                padding-bottom: 8px;
+            }
+            .emailForm{
+                grid-area: email;
+               
+            }
+            .phoneForm{
+                grid-area: phone;
+                
+                
+            }
+            .nameForm{
+                grid-area: name;
+                
+            }
+            .messageForm{
+                grid-area: message;
+                padding-left: 26px;
+                textarea{
+                    border:none;
+                    border: 1px solid #e6e6e6;
+                    outline: transparent;
+                    resize: none;
+                }
+            }
+            .topic{
+                grid-area: topic;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                position: relative;
+               
+                &_select{
+                    width: 100%;
+                    height: 40px;
+                    border:1px solid #e6e6e6;
+                    position: relative;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-top: 8px;
+                    .new_topic{
+                        padding-left: 15px;
+                    }
+                }
+                &_select_before::before{
+                    content: "";
+                    display: block;
+                    width: 44px;
+                    height: 1px;
+                    background-color: #cdcdcd;
+                    position: absolute;
+                    left: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &_select_after::after{
+                    content: "\f105";
+                    font-family: 'icomoon';
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(90deg);
+                    color:#898888;
+                    
+                }
+                .popUp_topic{
+                    position: absolute;
+                    top:100%;
+                    width: 100%;
+                    left:0px;
+                    
+                    .topicList_box{
+                        border: 1px solid transparent;
+                        width: 100%;
+                        overflow: hidden;
+                        height: 0;
+                        
+
+                        .topic_elem{
+                            padding: 5px 15px 5px 15px ; 
+                            
+                            span{
+                                cursor: pointer;
+                            }
+                            span:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    .show{
+                        height: max-content;
+                        border-color: #e6e6e6;
+                        
+                    }
+                }
+            }
+            .advice_submit{
+                grid-area: button;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                &_btn{
+                    font-size: 14px;
+                    letter-spacing: 0.25px;
+                    color:#282828;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 500;
+                    padding-bottom: 12px;
+                    cursor: pointer;
+                    background-color: #fff;
+                    outline: transparent;
+                }
+            }
+            input{
+                height: 40px;
+                border:none;
+                border: 1px solid #e6e6e6;
+                outline: transparent;
+                padding-left: 5px;
+            }
+        }
+
+    }
+}

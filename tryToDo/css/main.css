@@ -25,7 +25,7 @@ a {
 .d-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(633px, auto) minmax(295px, auto) minmax(515px, auto) minmax(285px, auto) minmax(660px, auto) minmax(338px, auto) minmax(45px, auto);
+  grid-template-rows: minmax(633px, auto) minmax(295px, auto) minmax(298px, auto) minmax(515px, auto) minmax(283px, auto) minmax(656px, auto) minmax(335px, auto) minmax(45px, auto);
 }
 .grid-col {
   display: grid;
@@ -35,7 +35,6 @@ a {
 }
 .button {
   padding: 12px 19px 14px 19px ;
-  display: block;
   border: 1px solid #ffc222;
   border-right-width: 21px;
   position: relative;
@@ -47,6 +46,39 @@ a {
   right: -14px;
   z-index: 10;
   color: #fff;
+}
+.content {
+  justify-content: flex-start;
+  padding: 0px 15px 62px 150px;
+  align-items: center;
+}
+.content_title {
+  max-width: 380px;
+  position: relative;
+}
+.content_title h2 {
+  font-size: 24px;
+  line-height: 24px;
+  color: #212020;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  padding-bottom: 12px;
+}
+.content_title span {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+  font-family: 'PT Serif', serif;
+}
+.content_title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 105px;
+  height: 2px;
+  background-color: #ffc222;
+  top: 10px;
+  left: -137px;
 }
 .header_contacts {
   background-color: #303030;
@@ -171,7 +203,7 @@ a {
   text-align: center;
   line-height: 24px;
   margin-top: 23px;
-  margin-bottom: 40px;
+  margin-bottom: 52px;
 }
 .header_content .header_slider__description span {
   max-width: 620px;
@@ -229,7 +261,6 @@ a {
 }
 .services {
   padding-top: 60px;
-  padding-bottom: 25px;
 }
 .services_wrapper {
   padding: 0;
@@ -294,7 +325,7 @@ a {
   background-color: #f4f4f4;
 }
 .services_unit__description {
-  padding: 30px 44px 60px 44px;
+  padding: 30px 44px 72px 44px;
 }
 .services_unit .description_img {
   padding-top: 40px;
@@ -334,6 +365,178 @@ a {
 }
 .services .left_side {
   margin-left: auto;
+}
+.aboutCompany {
+  background: url('../img/companybg.jpg') no-repeat center center / cover;
+  height: 100%;
+}
+.aboutCompany .abComp {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 555px;
+  padding-left: 25px;
+}
+.aboutCompany .abComp_title {
+  padding-top: 30px;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-weight: 500;
+}
+.aboutCompany .abComp_description {
+  padding-bottom: 50px;
+  padding-top: 30px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #d3d2d2;
+  font-family: 'PT Serif', serif;
+  text-align: left;
+}
+.aboutCompany .abComp_more {
+  padding-bottom: 55px;
+}
+.aboutCompany .abComp_more__btn {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 24px;
+}
+.aboutCompany .abComp_more__btn::after {
+  color: #000;
+}
+.advice_bg {
+  background: url(../img/woman.png) no-repeat right bottom;
+}
+.advice_titleWrapper {
+  padding-top: 43px;
+}
+.advice_form {
+  font-style: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+.advice_form form {
+  display: grid;
+  grid-template-columns: minmax(260px, auto) 1fr minmax(230px, auto);
+  grid-template-rows: repeat(4, 75px);
+  grid-template-areas: "email message message" "phone message message" "name message message" "topic ... button";
+  max-width: 850px;
+}
+.advice_form form .input_heading {
+  padding-bottom: 8px;
+}
+.advice_form form .emailForm {
+  grid-area: email;
+}
+.advice_form form .phoneForm {
+  grid-area: phone;
+}
+.advice_form form .nameForm {
+  grid-area: name;
+}
+.advice_form form .messageForm {
+  grid-area: message;
+  padding-left: 26px;
+}
+.advice_form form .messageForm textarea {
+  border: none;
+  border: 1px solid #e6e6e6;
+  outline: transparent;
+  resize: none;
+}
+.advice_form form .topic {
+  grid-area: topic;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+.advice_form form .topic_select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #e6e6e6;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 8px;
+}
+.advice_form form .topic_select .new_topic {
+  padding-left: 15px;
+}
+.advice_form form .topic_select_before::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 1px;
+  background-color: #cdcdcd;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.advice_form form .topic_select_after::after {
+  content: "\f105";
+  font-family: 'icomoon';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  color: #898888;
+}
+.advice_form form .topic .popUp_topic {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0px;
+}
+.advice_form form .topic .popUp_topic .topicList_box {
+  border: 1px solid transparent;
+  width: 100%;
+  overflow: hidden;
+  height: 0;
+}
+.advice_form form .topic .popUp_topic .topicList_box .topic_elem {
+  padding: 5px 15px 5px 15px ;
+}
+.advice_form form .topic .popUp_topic .topicList_box .topic_elem span {
+  cursor: pointer;
+}
+.advice_form form .topic .popUp_topic .topicList_box .topic_elem span:hover {
+  text-decoration: underline;
+}
+.advice_form form .topic .popUp_topic .show {
+  height: max-content;
+  border-color: #e6e6e6;
+}
+.advice_form form .advice_submit {
+  grid-area: button;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.advice_form form .advice_submit_btn {
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  color: #282828;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  padding-bottom: 12px;
+  cursor: pointer;
+  background-color: #fff;
+  outline: transparent;
+}
+.advice_form form input {
+  height: 40px;
+  border: none;
+  border: 1px solid #e6e6e6;
+  outline: transparent;
+  padding-left: 5px;
 }
 .freeConsult_window {
   display: none;

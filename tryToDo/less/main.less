@@ -27,7 +27,7 @@ a{
 .d-grid{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(633px, auto) minmax(295px, auto) minmax(515px, auto) minmax(285px, auto) minmax(660px, auto)minmax(338px, auto) minmax(45px, auto);
+    grid-template-rows: minmax(633px, auto) minmax(295px, auto) minmax(298px, auto) minmax(515px, auto) minmax(283px, auto)minmax(656px, auto) minmax(335px, auto) minmax(45px, auto);
 }
 .grid-col{
     display: grid;
@@ -38,7 +38,7 @@ a{
 
 .button{
     padding: 12px 19px 14px 19px ;
-    display: block;
+    //display: block;
     border: 1px solid @orange;
     border-right-width: 21px;
     position: relative;
@@ -51,9 +51,45 @@ a{
     z-index: 10;
     color: #fff;
 }
+.content{
+    justify-content: flex-start;
+    padding: 0px 15px 62px 150px;
+    align-items: center;
+    &_title{
+        max-width: 380px;
+        position: relative;
+             h2{
+                font-size: 24px;
+                line-height: 24px;
+                color:#212020;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                padding-bottom: 12px;
+            }
+            span{
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.1px;
+                font-family: 'PT Serif', serif;
+            }
+    }
+    &_title::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 105px;
+        height: 2px;
+        background-color: @orange;
+        top: 10px;
+        left: -137px;
+    }
+
+}
 
 @orange:#ffc222;
 
 @import url('./blocks/header.less');
 @import url('./blocks/services.less');
+@import url('./blocks/company.less');
+@import url('./blocks/advice.less');
 @import url('./blocks/modalWindow.less');

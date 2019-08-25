@@ -55,3 +55,51 @@ function moveHeaderSlider() {
     });
 };
 moveHeaderSlider();
+
+// утановка высоты Textarea
+function setTextAreaHeight() {
+    const textarea = document.querySelector('#adv_message'),
+        allInput = document.forms.adviceForm.querySelectorAll('input');
+    let first = allInput[0].getBoundingClientRect();
+    let last = allInput[allInput.length - 1].getBoundingClientRect();
+
+    const areaStyles = getComputedStyle(textarea);
+
+    let textHeight = (last.bottom - first.top - parseInt(areaStyles.paddingTop) - parseInt(areaStyles.paddingBottom) - parseInt(areaStyles.border) * 2) + 'px';
+    textarea.style.height = textHeight;
+
+}
+setTextAreaHeight();
+
+// ВЫБОР ТЕМЫ СООБЩЕНИЯ 
+window.addEventListener('load', function () {
+    function changeTopic() {
+        const topicField = document.querySelector('.topic_select'),
+            popUp = document.querySelector('.popUp_topic .topicList_box');
+
+        topicField.addEventListener('click', function (e) {
+            if (popUp.classList.contains('show')) popUp.classList.remove('show');
+            else
+                popUp.classList.toggle('show');
+
+        });
+
+        popUp.addEventListener('click', e => {
+            if (e.target.tagName != 'SPAN') return;
+            const text = e.target.textContent.trim();
+
+            if (e.target.parentNode.dataset.topic == 'other') {
+                if (!topicField.classList.contains('topic_select_before')) {
+                    topicField.classList.add('topic_select_before');
+                }
+                topicField.innerHTML = '';
+            } else {
+                topicField.classList.remove('topic_select_before');
+                topicField.innerHTML = `<span class="new_topic">${text}</span>`;
+            }
+
+            popUp.classList.remove('show');
+        });
+    };
+    changeTopic();
+});

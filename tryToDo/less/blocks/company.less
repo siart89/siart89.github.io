@@ -1,0 +1,45 @@
+.aboutCompany{
+    background: url('../img/companybg.jpg') no-repeat center center / cover;
+    height: 100%;
+    
+    .abComp{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 555px;
+        padding-left: 25px;
+        &_title{
+            padding-top: 30px;
+            font-size: 24px;
+            line-height: 24px;
+            font-family: 'Roboto', sans-serif;
+            color:#fff;
+            font-weight: 500;
+        }
+        &_description{
+            padding-bottom: 50px;
+            padding-top: 30px;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.1px;
+            color:#d3d2d2;
+            font-family: 'PT Serif', serif;
+            text-align: left;
+           
+        }
+        &_more{
+            padding-bottom: 55px;
+
+            &__btn{
+                color:#fff;
+                font-family: 'Roboto', sans-serif;
+                font-size: 14px;
+                letter-spacing: 0.25px;
+                line-height: 24px;
+            }
+            &__btn::after{
+                color:#000;
+            }
+        }
+    }
+}
