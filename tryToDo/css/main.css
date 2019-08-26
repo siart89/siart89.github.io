@@ -538,6 +538,9 @@ a {
   outline: transparent;
   padding-left: 5px;
 }
+.right_shift {
+  transform: translateX(-100%);
+}
 .freeConsult_window {
   display: none;
   position: fixed;

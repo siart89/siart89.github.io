@@ -33,18 +33,21 @@ function moveHeaderSlider() {
         rightBtn = document.querySelector('.right_btn'),
         allSlider = document.querySelectorAll('.header_slider'),
         sliderWrapper = document.querySelector('.slider_wrapper');
-    let shift = 0;
+    let shift = 0,
+        nexCount = 0;
 
     sliderWrapper.addEventListener('click', (e) => {
         if (!(e.target == leftBtn || e.target == rightBtn)) return;
 
-        if (e.target == leftBtn) {
+        if (e.target == rightBtn) {
             shift -= 100;
+            
         } else {
             if (shift === 0) {
                 shift = -100 * (allSlider.length - 1);
             } else {
                 shift += 100;
+                
             };
         };
         if (Math.abs(shift) > 100 * (allSlider.length - 1)) shift = 0;
@@ -52,7 +55,38 @@ function moveHeaderSlider() {
         allSlider.forEach(function (elem) {
             elem.style.transform = `translateX(${shift}%)`;
         });
+       ;
     });
+
+    // Проба Курусели -Слайдера
+    //sliderWrapper.addEventListener('click', doCarousel);
+
+    function doCarousel(event) {
+        const sliderBox = document.querySelector('.removable_wrapper');
+        let newAllSlider = document.querySelectorAll('.header_slider');
+           
+
+        if (!(event.target == leftBtn || event.target == rightBtn)) return;
+
+        if (event.target == rightBtn) {
+           newAllSlider.forEach((elem) => {
+                if (elem.classList.contains('active')) {
+                    elem.classList.add('right_shift');
+                    elem.classList.remove('active');
+                }
+           })
+            sliderBox.append(newAllSlider[0]);
+        } else {
+           
+            sliderBox.prepend(newAllSlider[newAllSlider.length - 1]);
+        };
+        
+        
+        // newAllSlider.forEach(function (elem) {
+        //     elem.style.transform = `translateX(${shift}%)`;
+        // });
+        newAllSlider = document.querySelectorAll('.header_slider');
+    };
 };
 moveHeaderSlider();
 
@@ -60,6 +94,8 @@ moveHeaderSlider();
 function setTextAreaHeight() {
     const textarea = document.querySelector('#adv_message'),
         allInput = document.forms.adviceForm.querySelectorAll('input');
+
+
     let first = allInput[0].getBoundingClientRect();
     let last = allInput[allInput.length - 1].getBoundingClientRect();
 
