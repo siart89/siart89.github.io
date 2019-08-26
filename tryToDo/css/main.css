@@ -408,6 +408,9 @@ a {
 .aboutCompany .abComp_more__btn::after {
   color: #000;
 }
+.advice {
+  padding-bottom: 35px;
+}
 .advice_bg {
   background: url(../img/woman.png) no-repeat right bottom;
 }
@@ -489,17 +492,28 @@ a {
   transform: translateY(-50%) rotate(90deg);
   color: #898888;
 }
+.advice_form form .topic_select_after_open::after {
+  content: "\f105";
+  font-family: 'icomoon';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  color: #898888;
+}
 .advice_form form .topic .popUp_topic {
   position: absolute;
   top: 100%;
   width: 100%;
   left: 0px;
+  z-index: 10;
 }
 .advice_form form .topic .popUp_topic .topicList_box {
   border: 1px solid transparent;
   width: 100%;
   overflow: hidden;
   height: 0;
+  background-color: #fff;
 }
 .advice_form form .topic .popUp_topic .topicList_box .topic_elem {
   padding: 5px 15px 5px 15px ;
@@ -541,10 +555,57 @@ a {
 .right_shift {
   transform: translateX(-100%);
 }
+.advantage {
+  background: url('../img/advantage_bg.jpg') no-repeat center center / cover;
+  padding-top: 50px;
+  padding-bottom: 35px;
+}
+.advantage .qualities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+}
+.advantage .qualities_element {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.advantage .qualities_element__checked {
+  height: 38px;
+  width: 38px;
+  border: 1px solid #ffc222;
+  position: relative;
+}
+.advantage .qualities_element__checked::before {
+  content: "\f00c";
+  font-family: 'icomoon';
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.advantage .qualities_element h4 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.advantage .qualities_element p {
+  color: #d3d2d2;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  font-family: 'PT Serif', serif;
+}
 .freeConsult_window {
   display: none;
   position: fixed;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: rgba(27, 27, 27, 0.8);
   z-index: 100;

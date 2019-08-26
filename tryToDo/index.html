@@ -14,264 +14,286 @@
 </head>
 
 <body>
-    <div class="d-grid">
-        <header class="header">
-            <div class="header_contacts">
-                <div class="header_contacts-wrapper contanier d-flex">
-                    <a href="tel:+380963092145" class="header_contacts__phone">+38 (096) 309 21 45</a>
-                    <a href="#" class="header_contacts__email">layout585@gmail.com</a>
-                    <a href="#" class="header_contacts__btn">Бесплатная консультация</a>
+    <!-- <div class="d-grid"> -->
+    <header class="header">
+        <div class="header_contacts">
+            <div class="header_contacts-wrapper contanier d-flex">
+                <a href="tel:+380963092145" class="header_contacts__phone">+38 (096) 309 21 45</a>
+                <a href="#" class="header_contacts__email">layout585@gmail.com</a>
+                <a href="#" class="header_contacts__btn">Бесплатная консультация</a>
+            </div>
+        </div>
+        <div class="header_nav">
+            <div class="header_nav-wrapper contanier d-flex">
+                <a href="#" class="header_nav__logo">
+                    <img src="./img/logo.png" alt="Logo">
+                </a>
+                <div class="header_nav__list">
+                    <ul>
+                        <li class="header_nav__item">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li class="header_nav__item">
+                            <a href="#">О компании</a>
+                        </li>
+                        <li class="header_nav__item">
+                            <a href="#">Услуги</a>
+                        </li>
+                        <li class="header_nav__item">
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="header_nav">
-                <div class="header_nav-wrapper contanier d-flex">
-                    <a href="#" class="header_nav__logo">
-                        <img src="./img/logo.png" alt="Logo">
+
+        </div>
+        <div class="header_content">
+            <div class="contanier slider_wrapper">
+                <div class="sliderBtn left_btn"></div>
+                <div class="sliderBtn right_btn "></div>
+                <div class="removable_wrapper">
+                    <!-- НАЧАЛО СМЕННЫХ СЛАЙДОВ -->
+                    <div class="header_slider d-flex active">
+                        <div class="header_slider__title ">
+                            <span>Комплексное закрытие предприятия</span>
+                        </div>
+                        <div class="header_slider__description">
+                            <span>
+                                Полное прекращение существования юридического лица с сохранением легальности всей
+                                предыдущей деятельности.
+                            </span>
+                        </div>
+                        <div class="header_slider__btn ">
+                            <a href="#" class="main_btn button">Оставить заявку</a>
+                        </div>
+                    </div>
+                    <div class="header_slider d-flex">
+                        <div class="header_slider__title">
+                            <span>Комплексное закрытие предприятия №2</span>
+                        </div>
+                        <div class="header_slider__description">
+                            <span>
+                                Полное прекращение существования юридического лица с сохранением легальности всей
+                                предыдущей деятельности.
+                            </span>
+                        </div>
+                        <div class="header_slider__btn ">
+                            <a href="#" class="main_btn button">Оставить заявку</a>
+                        </div>
+                    </div>
+                    <div class="header_slider d-flex">
+                        <div class="header_slider__title">
+                            <span>Комплексное закрытие предприятия №3</span>
+                        </div>
+                        <div class="header_slider__description">
+                            <span>
+                                Полное прекращение существования юридического лица с сохранением легальности всей
+                                предыдущей деятельности.
+                            </span>
+                        </div>
+                        <div class="header_slider__btn ">
+                            <a href="#" class="main_btn button">Оставить заявку</a>
+                        </div>
+                    </div>
+                    <div class="header_slider d-flex">
+                        <div class="header_slider__title">
+                            <span>Комплексное закрытие предприятия №4</span>
+                        </div>
+                        <div class="header_slider__description">
+                            <span>
+                                Полное прекращение существования юридического лица с сохранением легальности всей
+                                предыдущей деятельности.
+                            </span>
+                        </div>
+                        <div class="header_slider__btn ">
+                            <a href="#" class="main_btn button">Оставить заявку</a>
+                        </div>
+                    </div>
+                    <!-- КОНЕЦ СЛАЙДЕРА -->
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <section class="services">
+        <div class="contanier services_wrapper">
+            <div class="services_content d-flex">
+                <div class="services_content__title">
+                    <h2>Наши Услуги</h2>
+                    <p>Комплексный подход к вашему вопросу, своевременная правовую помощь, представление интересов
+                        во всех судебных инстанциях.</p>
+                </div>
+                <div class="allServices_btn">
+                    <a href="#" id="showServices"> Показать все услуги</a>
+                </div>
+            </div>
+            <!-- ДЕТАЛИ УСЛУГ -->
+            <div class="services_unit">
+
+                <div class="services_description grid-col" id="first">
+                    <!-- Лого услуги -->
+                    <div class="description_img" id="defaulter">
+                        <img src="./img/hammer.png" alt="hammer">
+                    </div>
+                    <!-- Конец лого услуги -->
+                    <!-- Описание услуги-->
+                    <div class="services_unit__description" id="defTitle">
+                        <h3>Банкротство и ликвидация</h3>
+                        <p>Полное прекращение существования юридического лица с сохранением легальности всей
+                            предыдущей
+                            деятельности</p>
+                    </div>
+                    <!-- Конец Описания услуги -->
+                    <!-- Кнопки детальной информации Услуги -->
+                    <div class="description_more" id="defBtn">
+                        <div class="description_more__detail">
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="description_more__btn left_side">
+                            <a href="#" class="button order_btn">Заказать</a>
+                        </div>
+                    </div>
+                    <!-- Конец Кнопки детальной информации Услуги -->
+                </div>
+                <div class="services_description grid-col">
+                    <div class="description_img" id="lawyer">
+                        <img src="./img/capitol.png" alt="capitol">
+                    </div>
+                    <!-- Конец лого услуги -->
+                    <!-- Описание услуги-->
+                    <div class="services_unit__description" id="lawTitle">
+                        <h3>Адвокатское сопровождение</h3>
+                        <p>Мы гарантируем полное профессиональное обслуживание клиентов в заявленных сферах
+                            деятельности и соблюдение конфиденциальности.</p>
+                    </div>
+                    <!-- Конец Описания услуги -->
+                    <!-- Кнопки детальной информации Услуги -->
+                    <div class="description_more" id="lawBtn">
+                        <div class="description_more__detail">
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="description_more__btn left_side">
+                            <a href="#" class="button order_btn">Заказать</a>
+                        </div>
+                    </div>
+                    <!-- Конец Кнопки детальной информации Услуги -->
+                </div>
+
+                <div class="services_description grid-col">
+                    <div class="description_img " id="tax">
+                        <img src="./img/case.png" alt="case">
+                    </div>
+                    <!-- Конец лого услуги -->
+                    <!-- Описание услуги-->
+                    <div class="services_unit__description " id="taxTitle">
+                        <h3>Налоговый аудит</h3>
+                        <p>Налоговый аудит проводят перед проведением налоговых проверок; при оценке возможных
+                            налоговых рисков; при оптимизации налогообложения.</p>
+                    </div>
+                    <!-- Конец Описания услуги -->
+                    <!-- Кнопки детальной информации Услуги -->
+                    <div class="description_more" id="taxBtn">
+                        <div class="description_more__detail">
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <div class="description_more__btn left_side">
+                            <a href="#" class="button order_btn">Заказать</a>
+                        </div>
+                    </div>
+                    <!-- Конец Кнопки детальной информации Услуги -->
+                </div>
+            </div>
+    </section>
+    <section class="aboutCompany">
+        <div class="contanier">
+            <div class="abComp">
+                <h2 class="abComp_title"> О компании</h2>
+                <p class="abComp_description">
+                    Компания специализируется на оказании услуг в сфере корпоративного права, налогового
+                    консалтинга, представительства в судах, ликвидации и банкротства предприятий. На сегодняшний
+                    день, коллектив компании объединяет
+                    высокопрофессиональных экспертов имеющих
+                    специализации в отдельных областях права.
+                </p>
+                <div class="abComp_more">
+                    <a href="#" class="button abComp_more__btn">
+                        Узнать больше
                     </a>
-                    <div class="header_nav__list">
-                        <ul>
-                            <li class="header_nav__item">
-                                <a href="#">Главная</a>
-                            </li>
-                            <li class="header_nav__item">
-                                <a href="#">О компании</a>
-                            </li>
-                            <li class="header_nav__item">
-                                <a href="#">Услуги</a>
-                            </li>
-                            <li class="header_nav__item">
-                                <a href="#">Контакты</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-            <div class="header_content">
-                <div class="contanier slider_wrapper">
-                    <div class="sliderBtn left_btn"></div>
-                    <div class="sliderBtn right_btn "></div>
-                    <div class="removable_wrapper">
-                        <!-- НАЧАЛО СМЕННЫХ СЛАЙДОВ -->
-                        <div class="header_slider d-flex active">
-                            <div class="header_slider__title ">
-                                <span>Комплексное закрытие предприятия</span>
-                            </div>
-                            <div class="header_slider__description">
-                                <span>
-                                    Полное прекращение существования юридического лица с сохранением легальности всей
-                                    предыдущей деятельности.
-                                </span>
-                            </div>
-                            <div class="header_slider__btn ">
-                                <a href="#" class="main_btn button">Оставить заявку</a>
-                            </div>
-                        </div>
-                        <div class="header_slider d-flex">
-                            <div class="header_slider__title">
-                                <span>Комплексное закрытие предприятия №2</span>
-                            </div>
-                            <div class="header_slider__description">
-                                <span>
-                                    Полное прекращение существования юридического лица с сохранением легальности всей
-                                    предыдущей деятельности.
-                                </span>
-                            </div>
-                            <div class="header_slider__btn ">
-                                <a href="#" class="main_btn button">Оставить заявку</a>
-                            </div>
-                        </div>
-                        <div class="header_slider d-flex">
-                            <div class="header_slider__title">
-                                <span>Комплексное закрытие предприятия №3</span>
-                            </div>
-                            <div class="header_slider__description">
-                                <span>
-                                    Полное прекращение существования юридического лица с сохранением легальности всей
-                                    предыдущей деятельности.
-                                </span>
-                            </div>
-                            <div class="header_slider__btn ">
-                                <a href="#" class="main_btn button">Оставить заявку</a>
-                            </div>
-                        </div>
-                        <div class="header_slider d-flex">
-                            <div class="header_slider__title">
-                                <span>Комплексное закрытие предприятия №4</span>
-                            </div>
-                            <div class="header_slider__description">
-                                <span>
-                                    Полное прекращение существования юридического лица с сохранением легальности всей
-                                    предыдущей деятельности.
-                                </span>
-                            </div>
-                            <div class="header_slider__btn ">
-                                <a href="#" class="main_btn button">Оставить заявку</a>
-                            </div>
-                        </div>
-                        <!-- КОНЕЦ СЛАЙДЕРА -->
-                    </div>
-
                 </div>
             </div>
-        </header>
-        <section class="services">
-            <div class="contanier services_wrapper">
-                <div class="services_content d-flex">
-                    <div class="services_content__title">
-                        <h2>Наши Услуги</h2>
-                        <p>Комплексный подход к вашему вопросу, своевременная правовую помощь, представление интересов
-                            во всех судебных инстанциях.</p>
-                    </div>
-                    <div class="allServices_btn">
-                        <a href="#" id="showServices"> Показать все услуги</a>
-                    </div>
-                </div>
-                <!-- ДЕТАЛИ УСЛУГ -->
-                <div class="services_unit">
-
-                    <div class="services_description grid-col" id="first">
-                        <!-- Лого услуги -->
-                        <div class="description_img" id="defaulter">
-                            <img src="./img/hammer.png" alt="hammer">
-                        </div>
-                        <!-- Конец лого услуги -->
-                        <!-- Описание услуги-->
-                        <div class="services_unit__description" id="defTitle">
-                            <h3>Банкротство и ликвидация</h3>
-                            <p>Полное прекращение существования юридического лица с сохранением легальности всей
-                                предыдущей
-                                деятельности</p>
-                        </div>
-                        <!-- Конец Описания услуги -->
-                        <!-- Кнопки детальной информации Услуги -->
-                        <div class="description_more" id="defBtn">
-                            <div class="description_more__detail">
-                                <a href="#">Подробнее</a>
-                            </div>
-                            <div class="description_more__btn left_side">
-                                <a href="#" class="button order_btn">Заказать</a>
-                            </div>
-                        </div>
-                        <!-- Конец Кнопки детальной информации Услуги -->
-                    </div>
-                    <div class="services_description grid-col">
-                        <div class="description_img" id="lawyer">
-                            <img src="./img/capitol.png" alt="capitol">
-                        </div>
-                        <!-- Конец лого услуги -->
-                        <!-- Описание услуги-->
-                        <div class="services_unit__description" id="lawTitle">
-                            <h3>Адвокатское сопровождение</h3>
-                            <p>Мы гарантируем полное профессиональное обслуживание клиентов в заявленных сферах
-                                деятельности и соблюдение конфиденциальности.</p>
-                        </div>
-                        <!-- Конец Описания услуги -->
-                        <!-- Кнопки детальной информации Услуги -->
-                        <div class="description_more" id="lawBtn">
-                            <div class="description_more__detail">
-                                <a href="#">Подробнее</a>
-                            </div>
-                            <div class="description_more__btn left_side">
-                                <a href="#" class="button order_btn">Заказать</a>
-                            </div>
-                        </div>
-                        <!-- Конец Кнопки детальной информации Услуги -->
-                    </div>
-
-                    <div class="services_description grid-col">
-                        <div class="description_img " id="tax">
-                            <img src="./img/case.png" alt="case">
-                        </div>
-                        <!-- Конец лого услуги -->
-                        <!-- Описание услуги-->
-                        <div class="services_unit__description " id="taxTitle">
-                            <h3>Налоговый аудит</h3>
-                            <p>Налоговый аудит проводят перед проведением налоговых проверок; при оценке возможных
-                                налоговых рисков; при оптимизации налогообложения.</p>
-                        </div>
-                        <!-- Конец Описания услуги -->
-                        <!-- Кнопки детальной информации Услуги -->
-                        <div class="description_more" id="taxBtn">
-                            <div class="description_more__detail">
-                                <a href="#">Подробнее</a>
-                            </div>
-                            <div class="description_more__btn left_side">
-                                <a href="#" class="button order_btn">Заказать</a>
-                            </div>
-                        </div>
-                        <!-- Конец Кнопки детальной информации Услуги -->
-                    </div>
-                </div>
-        </section>
-        <section class="aboutCompany">
-            <div class="contanier">
-                <div class="abComp">
-                    <h2 class="abComp_title"> О компании</h2>
-                    <p class="abComp_description">
-                        Компания специализируется на оказании услуг в сфере корпоративного права, налогового
-                        консалтинга, представительства в судах, ликвидации и банкротства предприятий. На сегодняшний
-                        день, коллектив компании объединяет
-                        высокопрофессиональных экспертов имеющих
-                        специализации в отдельных областях права.
-                    </p>
-                    <div class="abComp_more">
-                        <a href="#" class="button abComp_more__btn">
-                            Узнать больше
-                        </a>
-                    </div>
+        </div>
+    </section>
+    <section class="advice">
+        <div class="contanier advice_bg">
+            <div class="advice_titleWrapper content">
+                <div class="advice_title content_title">
+                    <h2>Получить консультацию</h2>
+                    <p>Комплексный подход к вашему вопросу, своевременная правовую помощь, представление интересов
+                        во всех судебных инстанциях.</p>
                 </div>
             </div>
-        </section>
-        <section class="advice">
-            <div class="contanier advice_bg">
-                <div class="advice_titleWrapper content">
-                    <div class="advice_title content_title">
-                        <h2>Получить консультацию</h2>
-                        <p>Комплексный подход к вашему вопросу, своевременная правовую помощь, представление интересов
-                            во всех судебных инстанциях.</p>
-                    </div>
-                </div>
-                <div class="advice_formWrapper">
-                    <div class="advice_form">
-                        <form id="adviceForm">
-                            <label class="d-flex coll emailForm"><span class="input_heading">E-mail</span><input type="email"
-                                    id="email_input"></label>
-                            <label class="d-flex coll phoneForm"><span class="input_heading">Контактный телефон</span><input type="text"
-                                    id="phone_input"></label>
-                            <label class="d-flex coll nameForm"><span class="input_heading">ФИО</span><input type="text"
-                                    id="name_input"></label>
-                            <label class="d-flex coll messageForm"><span class="input_heading">Сообщение</span><textarea name="message"
-                                    id="adv_message"></textarea></label>
-                            <div class="topic">
-                                <div class="topic_title">
-                                    <span>Тема вопроса</span>
-                                </div>
-                                <div class="topic_select topic_select_before topic_select_after" data-status="main">
-                                    
-                                </div>
-                                <div class="popUp_topic">
-                                        <ul class="topicList_box">
-                                            <li class="topic_elem" data-topic="topic_1"><span>Тема №1</span></li>
-                                            <li class="topic_elem" data-topic="topic_2"><span>Тема №2</span></li>
-                                            <li class="topic_elem" data-topic="topic_3"><span>Тема №3</span></li>
-                                            <li class="topic_elem" data-topic="topic_4"><span>Тема №4</span></li>
-                                            <li class="topic_elem" data-topic="other"><span>Другая</span></li>
-                                        </ul>
-
-                                    </div>
+            <div class="advice_formWrapper">
+                <div class="advice_form">
+                    <form id="adviceForm">
+                        <label class="d-flex coll emailForm"><span class="input_heading">E-mail</span><input
+                                type="email" id="email_input"></label>
+                        <label class="d-flex coll phoneForm"><span class="input_heading">Контактный телефон</span><input
+                                type="text" id="phone_input"></label>
+                        <label class="d-flex coll nameForm"><span class="input_heading">ФИО</span><input type="text"
+                                id="name_input"></label>
+                        <label class="d-flex coll messageForm"><span class="input_heading">Сообщение</span><textarea
+                                name="message" id="adv_message"></textarea></label>
+                        <div class="topic">
+                            <div class="topic_title">
+                                <span>Тема вопроса</span>
                             </div>
-                                <div class="advice_submit">
-                                    <!-- <a href="#" class="button advice_submit_btn" > Получить консультацию</a> -->
-                                    <button class="button advice_submit_btn" type="submit">Получить консультацию</button>
-                                </div>
+                            <div class="topic_select topic_select_before topic_select_after" data-status="main">
 
-                        </form>
-                    </div>
+                            </div>
+                            <div class="popUp_topic">
+                                <ul class="topicList_box">
+                                    <li class="topic_elem" data-topic="topic_1"><span>Тема №1</span></li>
+                                    <li class="topic_elem" data-topic="topic_2"><span>Тема №2</span></li>
+                                    <li class="topic_elem" data-topic="topic_3"><span>Тема №3</span></li>
+                                    <li class="topic_elem" data-topic="topic_4"><span>Тема №4</span></li>
+                                    <li class="topic_elem" data-topic="other"><span>Другая</span></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="advice_submit">
+                            <!-- <a href="#" class="button advice_submit_btn" > Получить консультацию</a> -->
+                            <button class="button advice_submit_btn" type="submit">Получить консультацию</button>
+                        </div>
+
+                    </form>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+    <section class="advantage">
+        <div class="contanier">
+            <div class="qualities">
+                <div class="qualities_element">
+                    <div class="qualities_element__checked"></div>
+                    <h4>Десятки добровольных ликвидаций ежемесячно</h4>
+                    <p>Мы умеем минимизировать все риски в процессе добровольной ликвидации юридических лиц.</p>
+                </div>
+                <div class="qualities_element">
+                    <div class="qualities_element__checked"></div>
+                    <h4>Отличное знание законов в сфере банкротства </h4>
+                    <p>Позволяют нам эффективно отстаивать как интересы кредиторов, так и интересы собственников
+                        проблемной организации.</p>
+                </div>
+                <div class="qualities_element">
+                    <div class="qualities_element__checked"></div>
+                    <h4>Большой опыт сопровождения банкротства</h4>
+                    <p>Мы обладаем большим опытом сопровождения процедур банкротства предприятий.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- </div> -->
     <!-- Модальное окно Консультации -->
     <div class="freeConsult_window">
         <div class="form_wrapper">

@@ -1,0 +1,47 @@
+.advantage{
+    background: url('../img/advantage_bg.jpg') no-repeat center center / cover;
+    padding-top: 50px;
+    padding-bottom: 35px;
+    .qualities{
+        display: grid;
+        grid-template-columns: repeat(3 ,1fr);
+        grid-column-gap: 30px;
+        &_element{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            &__checked{
+                height: 38px;
+                width: 38px;
+                border: 1px solid @orange;
+                position: relative;
+            }
+            &__checked::before{
+                content: "\f00c";
+                font-family: 'icomoon';
+                position: absolute;
+                color:#fff;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            h4{
+                color:#fff;
+                font-size: 18px;
+                line-height: 24px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            p{
+                color: #d3d2d2;
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 0.1px;
+                font-family: 'PT Serif', serif;
+            }
+        }
+    }
+}

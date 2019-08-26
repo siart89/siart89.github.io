@@ -41,13 +41,13 @@ function moveHeaderSlider() {
 
         if (e.target == rightBtn) {
             shift -= 100;
-            
+
         } else {
             if (shift === 0) {
                 shift = -100 * (allSlider.length - 1);
             } else {
                 shift += 100;
-                
+
             };
         };
         if (Math.abs(shift) > 100 * (allSlider.length - 1)) shift = 0;
@@ -55,7 +55,7 @@ function moveHeaderSlider() {
         allSlider.forEach(function (elem) {
             elem.style.transform = `translateX(${shift}%)`;
         });
-       ;
+        ;
     });
 
     // Проба Курусели -Слайдера
@@ -64,24 +64,24 @@ function moveHeaderSlider() {
     function doCarousel(event) {
         const sliderBox = document.querySelector('.removable_wrapper');
         let newAllSlider = document.querySelectorAll('.header_slider');
-           
+
 
         if (!(event.target == leftBtn || event.target == rightBtn)) return;
 
         if (event.target == rightBtn) {
-           newAllSlider.forEach((elem) => {
+            newAllSlider.forEach((elem) => {
                 if (elem.classList.contains('active')) {
                     elem.classList.add('right_shift');
                     elem.classList.remove('active');
                 }
-           })
+            })
             sliderBox.append(newAllSlider[0]);
         } else {
-           
+
             sliderBox.prepend(newAllSlider[newAllSlider.length - 1]);
         };
-        
-        
+
+
         // newAllSlider.forEach(function (elem) {
         //     elem.style.transform = `translateX(${shift}%)`;
         // });
@@ -114,10 +114,13 @@ window.addEventListener('load', function () {
             popUp = document.querySelector('.popUp_topic .topicList_box');
 
         topicField.addEventListener('click', function (e) {
-            if (popUp.classList.contains('show')) popUp.classList.remove('show');
-            else
+            if (popUp.classList.contains('show')) {
+                popUp.classList.remove('show');
+                this.classList.remove('topic_select_after_open');
+            } else {
                 popUp.classList.toggle('show');
-
+                this.classList.add('topic_select_after_open');
+            }
         });
 
         popUp.addEventListener('click', e => {
@@ -135,6 +138,7 @@ window.addEventListener('load', function () {
             }
 
             popUp.classList.remove('show');
+            topicField.classList.remove('topic_select_after_open');
         });
     };
     changeTopic();

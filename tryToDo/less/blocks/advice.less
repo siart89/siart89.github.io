@@ -1,4 +1,5 @@
 .advice{
+    padding-bottom: 35px;
     &_bg{
         background: url(../img/woman.png) no-repeat right bottom;
     }
@@ -87,17 +88,30 @@
                     color:#898888;
                     
                 }
+                &_select_after_open::after{
+                    content: "\f105";
+                    font-family: 'icomoon';
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(-90deg);
+                    color:#898888;
+                    
+                }
                 .popUp_topic{
                     position: absolute;
                     top:100%;
                     width: 100%;
                     left:0px;
+                    z-index: 10;
+                    
                     
                     .topicList_box{
                         border: 1px solid transparent;
                         width: 100%;
                         overflow: hidden;
                         height: 0;
+                        background-color: #fff;
                         
 
                         .topic_elem{
