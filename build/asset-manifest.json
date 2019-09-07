@@ -11,6 +11,7 @@
     "precache-manifest.223f19baa166bb9f2a24086d74a92c63.js": "/precache-manifest.223f19baa166bb9f2a24086d74a92c63.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.70d36f5d.chunk.css.map": "/static/css/main.70d36f5d.chunk.css.map",
-    "static/media/style.css": "/static/media/icomoon.b8f721eb.eot"
+    "static/media/style.css": "/static/media/icomoon.b8f721eb.eot",
+    "homepage" : "http://siart89.github.io/build"
   }
 }
