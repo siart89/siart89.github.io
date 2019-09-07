@@ -1,0 +1,159 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Pacifico|Roboto:400,500&display=swap&subset=cyrillic');
+
+body{
+    background-color: #ebf1fa;
+    // font-family: 'Pacifico', cursive;
+    // font-family: 'Amatic SC', cursive;
+    // font-family: 'Roboto', sans-serif;
+}
+.contanier{
+    width: 40vw;
+    margin: 50px auto;
+    background-color: #fff;
+    border:2px double #dbdbdb;
+    border-radius: 15px;
+}
+  
+.button{
+    line-height: 18px;
+    border:none;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+// БЛОК ВВОДА ЗАДАЧ
+
+
+.toDo-list{
+    max-width: 500px;
+    width: 100%;
+    margin: 10px auto;
+    
+
+    &__title{
+        font-size: 48px;
+        font-family: 'Amatic SC', cursive;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        color:#262525;
+        font-weight: 700;
+        text-align: center;
+    }
+    .add-task{
+        display: flex;
+        min-height: 35px;
+
+        .add-btn-cont{
+            order: 2;
+            flex-basis: 40px;
+        }
+        &__btn{
+            background: none;
+            outline: none;
+            width: 100%;
+            font-size: 18px;
+            height: 100%;
+            background-color: #fff;
+        }
+        .input-task{
+            flex:1 300px;
+            height: 100%;
+            border:none;
+            border-bottom: 1px solid black;
+            font-size: 22px;
+            line-height: 25px;
+            outline: none;
+            font-family: 'Pacifico', cursive;
+            font-weight: 400;
+        }
+        .input-task::placeholder{
+            color:#e0e0e0;
+        }
+    }
+}
+
+//БЛОК ВЫВОДА ЗАДАЧ
+
+
+.tasks{
+    padding-top: 15px;
+    .list{
+        
+        .task-title{
+            min-height: 25px;
+            border-bottom: 1px solid black;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+
+            .check-btn__inner{
+                width:14px;
+                height: 14px;
+                border:1px solid #dbdbdb;
+                position: relative;
+                margin-right: 5px;
+                margin-left: 3px;
+                cursor: pointer;
+            }
+            .delete-btn__inner{
+                width:14px;
+                height: 14px;
+                position: relative;
+                margin-left: 5px;
+                margin-right: 3px;
+                cursor: pointer;
+            }
+            .delete-btn__inner_onFocus::after{
+                content: "\f00d";
+                position: absolute;
+                font-family: 'icomoon' !important;
+                top:50%;
+                left: 50%;
+                color:#7d0b0b;
+                transform: translate(-50%, -50%);
+            }
+            .check-btn__inner_checked::after{
+                content: "\f00c";
+                color:#00c760;
+                position: absolute;
+                font-family: 'icomoon' !important;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &__text{
+                flex: 1 300px;
+                font-size: 20px;
+                font-family: 'Pacifico', cursive;
+                color: #000;
+            }
+            &__done{
+                text-decoration: line-through;
+            }
+        }
+    }
+}
+
+//Переключение между задачами
+
+.count{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10px 10px 10px;
+
+    &-unit{
+        cursor: pointer;
+        font-family: 'Pacifico', cursive;
+        letter-spacing: 1px;
+        font-size: 16px;
+        color:#8a0303;
+    }
+    &-btn{
+        &_onFocus{
+            font-weight: bold;
+        }
+    }
+    
+}
