@@ -8,10 +8,10 @@ class ListBox extends React.Component {
         super(props);
 
         this.state = {
-            listArr: [],
+            listArr: JSON.parse(localStorage.getItem('listArr')) || [],
             value: '',
-            allDoneTasks: [],
-            removHistory: [],
+            allDoneTasks: JSON.parse(localStorage.getItem('allDoneTasks')) || [],
+            removHistory: JSON.parse(localStorage.getItem('removHistory')) || [],
             showRemoved: false,
             showCompleted: false,
             showAll: true,
@@ -25,6 +25,7 @@ class ListBox extends React.Component {
         this.handleChangeListToAll = this.handleChangeListToAll.bind(this);
         this.handleChangeListToCompleted = this.handleChangeListToCompleted.bind(this);
         this.handleClearList = this.handleClearList.bind(this);
+        this.toLocalStorage = this.toLocalStorage.bind(this);
     }
 
     handleOnClick() {
@@ -44,8 +45,13 @@ class ListBox extends React.Component {
             listArr: list,
             value: '',
         });
+        setTimeout(() => this.toLocalStorage(this.state.listArr, 'listArr'));
     }
-
+    toLocalStorage(arr, key) {
+        const toStorArray = JSON.stringify(arr);
+        localStorage.setItem(key, toStorArray);
+        
+    }
     handleOnChange(e) {
         this.setState({
             value: e.target.value,
@@ -84,6 +90,7 @@ class ListBox extends React.Component {
             allDoneTasks: nowDone,
 
         });
+        setTimeout(() => this.toLocalStorage(this.state.allDoneTasks, 'allDoneTasks'));
     }
     // удаление строки
     allDeleted(set, id) {
@@ -112,6 +119,9 @@ class ListBox extends React.Component {
             listArr: allTasks,
             removHistory: removed,
         });
+        setTimeout(() => this.toLocalStorage(this.state.allDoneTasks, 'allDoneTasks'));
+        setTimeout(() => this.toLocalStorage(this.state.listArr, 'listArr'));
+        setTimeout(() => this.toLocalStorage(this.state.removHistory, 'removHistory'));
     }
 
     handleChangeListToRemoved() {
@@ -143,7 +153,8 @@ class ListBox extends React.Component {
             showRemoved: false,
             showCompleted: false,
             showAll: true,
-        })
+        });
+        localStorage.clear()
     }
     render() {
         let isHidenBtns = (this.state.showRemoved ? false : true)

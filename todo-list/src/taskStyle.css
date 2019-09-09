@@ -46,12 +46,10 @@ body {
   background-color: #fff;
 }
 .toDo-list .add-task .input-task {
-  flex: 1 300px;
-  height: 100%;
+  flex: 1 150px;
   border: none;
   border-bottom: 1px solid black;
   font-size: 22px;
-  line-height: 25px;
   outline: none;
   font-family: 'Pacifico', cursive;
   font-weight: 400;
@@ -105,7 +103,7 @@ body {
   transform: translate(-50%, -50%);
 }
 .tasks .list .task-title__text {
-  flex: 1 300px;
+  flex: 1 150px;
   font-size: 20px;
   font-family: 'Pacifico', cursive;
   color: #000;
@@ -127,4 +125,38 @@ body {
 }
 .count-btn_onFocus {
   font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .contanier {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .contanier {
+    width: 80vw;
+  }
+}
+@media (max-width: 480px) {
+  .contanier {
+    width: 85vw;
+  }
+}
+@media (max-width: 390px) {
+  body {
+    overflow-x: hidden;
+  }
+  .contanier {
+    width: 82vw;
+  }
+  .input-task {
+    max-width: 90%;
+  }
+  .count {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .count-unit {
+    font-size: 14px;
+  }
 }
