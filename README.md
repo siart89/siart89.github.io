@@ -3,4 +3,6 @@
 
 [Organaizer](http://siart89.github.io/react_organaizer "сам сайт")
 
+[Shop](http://siart89.github.io/myShop_app "сам сайт")
+
 
